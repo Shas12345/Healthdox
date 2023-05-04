@@ -1,0 +1,1564 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>66/3/1</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Apr 24 22:58:46 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>215 seconds (215142 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Hipaa.ToVerifyLeftNavigationBarFunctionality.driver()'><b>driver</b><br>Test class: Hipaa.ToVerifyLeftNavigationBarFunctionality<br>Parameters: chrome<br/>
+<a href="#Output-1265632026" onClick='toggleBox("Output-1265632026", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1265632026" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1265632026">
+Chrome Browser launched successfully<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=112.0.5615.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a7284d56439250fe0526bb49c224c9f
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+	at Generic_Liberary.BaseClass.driver(BaseClass.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1265632026", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1265632026'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=112.0.5615.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a7284d56439250fe0526bb49c224c9f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+	at Generic_Liberary.BaseClass.driver(BaseClass.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>3</td>
+<td>Hipaa.ToVerifyLeftNavigationBarFunctionality@1fa268de</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Hipaa.ToVerifyLeftNavigationBarFunctionality.quit()'><b>quit</b><br>Test class: Hipaa.ToVerifyLeftNavigationBarFunctionality</td>
+<td></td>
+<td>-1682357390</td>
+<td>Hipaa.ToVerifyLeftNavigationBarFunctionality@1fa268de</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Hipaa.TableCollpaseFunctionality.verifyTableCollapseOnTechnologyRiskAssessmentPage()'><b>verifyTableCollapseOnTechnologyRiskAssessmentPage</b><br>Test class: Hipaa.TableCollpaseFunctionality<br/>
+<a href="#Output-521411397" onClick='toggleBox("Output-521411397", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-521411397" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-521411397">
+Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page<br/>
+Successfully clicked on Risk Assessment on left navigation bar in technology risks page<br/>
+Successfully clicked on New Risk under Risk Assessment section in technology risk page<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//a[@class=&apos;accordion-toggle risk-panel collapsed&apos;])[2]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at Hipaa.TableCollpaseFunctionality.verifyTableCollapseOnTechnologyRiskAssessmentPage(TableCollpaseFunctionality.java:40)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@class=&apos;accordion-toggle risk-panel collapsed&apos;])[2]&quot;}
+  (Session info: chrome=112.0.5615.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55115}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 12403d06a24aa1d216e73fd412326fc0
+*** Element info: {Using=xpath, value=(//a[@class=&apos;accordion-toggle risk-panel collapsed&apos;])[2]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 16 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace521411397", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace521411397'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//a[@class=&apos;accordion-toggle risk-panel collapsed&apos;])[2]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at Hipaa.TableCollpaseFunctionality.verifyTableCollapseOnTechnologyRiskAssessmentPage(TableCollpaseFunctionality.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@class=&apos;accordion-toggle risk-panel collapsed&apos;])[2]&quot;}
+  (Session info: chrome=112.0.5615.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55115}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 12403d06a24aa1d216e73fd412326fc0
+*** Element info: {Using=xpath, value=(//a[@class=&apos;accordion-toggle risk-panel collapsed&apos;])[2]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 16 more
+</pre></div></td>
+<td>38</td>
+<td>Hipaa.TableCollpaseFunctionality@4f18837a</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.HostNameLabel()'><b>HostNameLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //label[text()=&apos;Name of Application&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.HostNameLabel(ToVerifyAllTheLabelsInHardwareAssetPage.java:44)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text()=&apos;Name of Application&apos;]&quot;}
+  (Session info: chrome=112.0.5615.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55151}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5caf82ea9f17495356c11fbc0d5f9506
+*** Element info: {Using=xpath, value=//label[text()=&apos;Name of Application&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 16 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace972713017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace972713017'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //label[text()=&apos;Name of Application&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.HostNameLabel(ToVerifyAllTheLabelsInHardwareAssetPage.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text()=&apos;Name of Application&apos;]&quot;}
+  (Session info: chrome=112.0.5615.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55151}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5caf82ea9f17495356c11fbc0d5f9506
+*** Element info: {Using=xpath, value=//label[text()=&apos;Name of Application&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 16 more
+</pre></div></td>
+<td>21</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.assetClassLabel()'><b>assetClassLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[contains(@for,&apos;AssetC&apos;)]&quot;}
+  (Session info: chrome=112.0.5615.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54741}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 72d0e2a3e5ec8d17a4ff86bb0d94c36a
+*** Element info: {Using=xpath, value=//label[contains(@for,&apos;AssetC&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.assetClassLabel(ToVerifyAllTheLabelsInSoftwareAssetPage.java:35)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1529743947", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1529743947'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[contains(@for,&apos;AssetC&apos;)]&quot;}
+  (Session info: chrome=112.0.5615.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54741}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 72d0e2a3e5ec8d17a4ff86bb0d94c36a
+*** Element info: {Using=xpath, value=//label[contains(@for,&apos;AssetC&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.assetClassLabel(ToVerifyAllTheLabelsInSoftwareAssetPage.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>6</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Hipaa.DropdownThreatSource.threatSourceDropdown()'><b>threatSourceDropdown</b><br>Test class: Hipaa.DropdownThreatSource<br/>
+<a href="#Output-1028494543" onClick='toggleBox("Output-1028494543", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1028494543" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1028494543">
+Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page<br/>
+Successfully clicked on Risk Assessment on left navigation bar in technology risks page<br/>
+The Threat Source Dropdown options from UI are <br/>
+Human<br/>
+Natural<br/>
+The Threat Source Dropdown Options from Excel are<br/>
+Human<br/>
+Natural<br/>
+Options are Matching<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>Hipaa.DropdownThreatSource@a514af7</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage.riskAssetClassDropdown()'><b>riskAssetClassDropdown</b><br>Test class: Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage<br/>
+<a href="#Output-1432732263" onClick='toggleBox("Output-1432732263", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1432732263" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1432732263">
+Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page<br/>
+Successfully clicked on Risk Assessment on left navigation bar in technology risks page<br/>
+The Risk Assest Dropdown are <br/>
+The Risk Asset Class Dropdown options from UI are <br/>
+ePHI Software<br/>
+Laptop<br/>
+Mobile/Handheld Devices<br/>
+Network Infrastructure<br/>
+Operating System<br/>
+Server Hardware<br/>
+Server Software<br/>
+The Risk Asset Class Dropdown Options from Excel are<br/>
+ePHI Software<br/>
+Laptop<br/>
+Mobile/Handheld Devices<br/>
+Network Infrastructure<br/>
+Operating System<br/>
+Server Hardware<br/>
+Server Software<br/>
+Options are Matching<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage@71809907</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.assessor()'><b>assessor</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-2119215449" onClick='toggleBox("Output-2119215449", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2119215449" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2119215449">
+Verifyed Assessor label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.riskExposureLevel()'><b>riskExposureLevel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1524573397" onClick='toggleBox("Output-1524573397", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1524573397" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1524573397">
+Verifyed Risk Exposure Level label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.DropdownRiskImpactCategory.riskImpactCatrgoryDropdown()'><b>riskImpactCatrgoryDropdown</b><br>Test class: Hipaa.DropdownRiskImpactCategory<br/>
+<a href="#Output-2132721426" onClick='toggleBox("Output-2132721426", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2132721426" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2132721426">
+Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page<br/>
+Successfully clicked on Risk Assessment on left navigation bar in technology risks page<br/>
+The Risk Impact Category Dropdown options from UI are <br/>
+Integrity<br/>
+Confidentiality<br/>
+Availability<br/>
+Error : DropDown options from UI are not matching with expected option in the excel<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>Hipaa.DropdownRiskImpactCategory@6b927fb</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.dataClassificationLabel()'><b>dataClassificationLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-310904582" onClick='toggleBox("Output-310904582", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-310904582" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-310904582">
+Successfully verified Data Classification label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.status()'><b>status</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-283941602" onClick='toggleBox("Output-283941602", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-283941602" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-283941602">
+Verifyed Status label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.businessFunctionLabel()'><b>businessFunctionLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-1497162674" onClick='toggleBox("Output-1497162674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1497162674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1497162674">
+Successfully verified Business Function label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyHRMPageComponents.administrativeRiskAssessment()'><b>administrativeRiskAssessment</b><br>Test class: Hipaa.ToVerifyHRMPageComponents<br/>
+<a href="#Output-180767048" onClick='toggleBox("Output-180767048", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-180767048" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-180767048">
+Successfully navigated to Administrative Risk Assessment Page upon clicking on Administrative Risk Assessment Text in HRM Page<br/>
+Successfully navigated to Administrative Risk Assessment Page upon clicking on Administrative Risk Assessment Image in HRM Page<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>Hipaa.ToVerifyHRMPageComponents@5ffead27</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.existingControls()'><b>existingControls</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-654513939" onClick='toggleBox("Output-654513939", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-654513939" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-654513939">
+Verifyed Existing Controls label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.departmentName()'><b>departmentName</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1252893627" onClick='toggleBox("Output-1252893627", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1252893627" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1252893627">
+Verifyed Department Name label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.DropdownImpactLevel.impactLevelDropdown()'><b>impactLevelDropdown</b><br>Test class: Hipaa.DropdownImpactLevel<br/>
+<a href="#Output-945307072" onClick='toggleBox("Output-945307072", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-945307072" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-945307072">
+Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page<br/>
+Successfully clicked on Risk Assessment on left navigation bar in technology risks page<br/>
+The Impact Level Dropdown options from UI are <br/>
+High<br/>
+Medium<br/>
+Low<br/>
+The Impact Level Dropdown Options from Excel are<br/>
+High<br/>
+Medium<br/>
+Low<br/>
+Options are Matching<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>Hipaa.DropdownImpactLevel@5af3afd9</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.impactLevel()'><b>impactLevel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-2142366635" onClick='toggleBox("Output-2142366635", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2142366635" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2142366635">
+Verifyed Impact Level label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.riskImpactCategory()'><b>riskImpactCategory</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1507561031" onClick='toggleBox("Output-1507561031", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1507561031" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1507561031">
+Verifyed Risk Impact Category label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.selectControlClass()'><b>selectControlClass</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-249012042" onClick='toggleBox("Output-249012042", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-249012042" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-249012042">
+Verifyed Select Control Class label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.targetQuarter()'><b>targetQuarter</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1766065242" onClick='toggleBox("Output-1766065242", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1766065242" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1766065242">
+Verifyed Target Quarter label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.closedDate()'><b>closedDate</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-2016118196" onClick='toggleBox("Output-2016118196", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2016118196" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2016118196">
+Verifyed  Closed Date label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.description()'><b>description</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-682162573" onClick='toggleBox("Output-682162573", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-682162573" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-682162573">
+Verifyed Description label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.subControlName()'><b>subControlName</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1446464785" onClick='toggleBox("Output-1446464785", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1446464785" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1446464785">
+Verifyed Sub Control Name label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage.probabilityOfOccuranceDropdown()'><b>probabilityOfOccuranceDropdown</b><br>Test class: Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage<br/>
+<a href="#Output-1576148058" onClick='toggleBox("Output-1576148058", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1576148058" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1576148058">
+The Risk Assest Dropdown are <br/>
+The Probability of Occurance Dropdown options from UI are <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+High<br/>
+Medium<br/>
+Low<br/>
+Error : DropDown options from UI are not matching with expected option in the excel<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage@71809907</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.riskId()'><b>riskId</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1131063617" onClick='toggleBox("Output-1131063617", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1131063617" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1131063617">
+Verifyed Risk Id label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.DropdownRisInput.risInputDropdown()'><b>risInputDropdown</b><br>Test class: Hipaa.DropdownRisInput<br/>
+<a href="#Output-1940528518" onClick='toggleBox("Output-1940528518", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1940528518" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1940528518">
+Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page<br/>
+Successfully clicked on Risk Assessment on left navigation bar in technology risks page<br/>
+The Risk Input Dropdown options from UI are <br/>
+Feedback<br/>
+Audit<br/>
+Management Review<br/>
+Periodic Review<br/>
+Customer<br/>
+The Risk Input Dropdown Options from Excel are<br/>
+Feedback<br/>
+Audit<br/>
+Management Review<br/>
+Periodic Review<br/>
+Customer<br/>
+Options are Matching<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>Hipaa.DropdownRisInput@4fb61f4a</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.departmentFunctionLabel()'><b>departmentFunctionLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-1306220916" onClick='toggleBox("Output-1306220916", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1306220916" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1306220916">
+Successfully verified Department Function label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.responsible()'><b>responsible</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-580101411" onClick='toggleBox("Output-580101411", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-580101411" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-580101411">
+Verifyed Responsible label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.operatingSystemLabel()'><b>operatingSystemLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-1001775364" onClick='toggleBox("Output-1001775364", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1001775364" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1001775364">
+Successfully verified Operating System label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.assetId()'><b>assetId</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-1398652522" onClick='toggleBox("Output-1398652522", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1398652522" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1398652522">
+Successfully verified AssetId label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.newControls()'><b>newControls</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1580724608" onClick='toggleBox("Output-1580724608", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1580724608" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1580724608">
+Verifyed New Control label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage.impactLevelDropdown()'><b>impactLevelDropdown</b><br>Test class: Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage<br/>
+<a href="#Output-1264602327" onClick='toggleBox("Output-1264602327", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1264602327" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1264602327">
+The Risk Assest Dropdown are <br/>
+The Impact Level Dropdown options from UI are <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+High<br/>
+Medium<br/>
+Low<br/>
+Error : DropDown options from UI are not matching with expected option in the excel<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage@71809907</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.descriptionLabel()'><b>descriptionLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-1852267998" onClick='toggleBox("Output-1852267998", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1852267998" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1852267998">
+Successfully verified Description label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage.risInputDropdown()'><b>risInputDropdown</b><br>Test class: Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage<br/>
+<a href="#Output-427906367" onClick='toggleBox("Output-427906367", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-427906367" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-427906367">
+The Risk Assest Dropdown are <br/>
+The Risk Input Dropdown options from UI are <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Feedback<br/>
+Audit<br/>
+Management Review<br/>
+Periodic Review<br/>
+Customer<br/>
+Error : DropDown options from UI are not matching with expected option in the excel<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage@71809907</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.descriptionLabel()'><b>descriptionLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-1818645668" onClick='toggleBox("Output-1818645668", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1818645668" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1818645668">
+Successfully verified Description label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyHRMPageComponents.technologyRiskAssessment()'><b>technologyRiskAssessment</b><br>Test class: Hipaa.ToVerifyHRMPageComponents<br/>
+<a href="#Output-712178992" onClick='toggleBox("Output-712178992", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-712178992" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-712178992">
+Successfully navigated to HRM Page on clicking on HIPAA on home page<br/>
+Successfully navigated to Technology Risk Assessment Page upon clicking on Technology Risk Assessment Text in HRM Page<br/>
+Successfully navigated to Technology Risk Assessment Page upon clicking on Technology Risk Assessment Image in HRM Page<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>Hipaa.ToVerifyHRMPageComponents@5ffead27</td></tr>
+<tr>
+<td title='Hipaa.ToCreateNewSoftwareAsset.newSoftwareAsset()'><b>newSoftwareAsset</b><br>Test class: Hipaa.ToCreateNewSoftwareAsset<br>Parameters: [Ljava.lang.String;@77c2494c<br/>
+<a href="#Output-1790030837" onClick='toggleBox("Output-1790030837", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1790030837" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1790030837">
+The Risk ID captured is GUC757<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>Hipaa.ToCreateNewSoftwareAsset@2e005c4b</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.makeLabel()'><b>makeLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-1300617283" onClick='toggleBox("Output-1300617283", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1300617283" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1300617283">
+Successfully verified Operating System label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToCreateANewTechnologyRiskAssessment.newTchnologyRiskAssessment()'><b>newTchnologyRiskAssessment</b><br>Test class: Hipaa.ToCreateANewTechnologyRiskAssessment<br>Parameters: [Ljava.lang.String;@f5958c9<br/>
+<a href="#Output-1997901266" onClick='toggleBox("Output-1997901266", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1997901266" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1997901266">
+The Risk ID captured is RSKT306<br/>
+The captured description :The organization:
+a. Develops, documents, and disseminates to [Assignment: organization-defined personnel or roles]:
+1. A risk assessment policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
+2. Procedures to facilitate the implementation of the risk assessment policy and associated risk assessment controls; and
+b. Reviews and updates the current:
+1. Risk assessment policy [Assignment: organization-defined frequency]; and
+2. Risk assessment procedures [Assignment: organization-defined frequency].<br/>
+The Target Quarter is :<br/>
+The Data in Edit Technology Risk Assessment Page is :<br/>
+RSKT694<br/>
+<br/>
+ToTest<br/>
+Shashank<br/>
+Audit<br/>
+Human<br/>
+Totest<br/>
+Testing<br/>
+Testing<br/>
+Confidentiality<br/>
+Low<br/>
+Access Control<br/>
+---Select Sub Control ---<br/>
+The organization:
+a. Develops, documents, and disseminates to [Assignment: organization-defined personnel or roles]:
+1. A risk assessment policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
+2. Procedures to facilitate the implementation of the risk assessment policy and associated risk assessment controls; and
+b. Reviews and updates the current:
+1. Risk assessment policy [Assignment: organization-defined frequency]; and
+2. Risk assessment procedures [Assignment: organization-defined frequency].<br/>
+Q4<br/>
+Emergency<br/>
+Mitigate<br/>
+Open<br/>
+<br/>
+</div>
+</td>
+<td></td>
+<td>29</td>
+<td>Hipaa.ToCreateANewTechnologyRiskAssessment@694abbdc</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.applicationCriticalityLabel()'><b>applicationCriticalityLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-1102600051" onClick='toggleBox("Output-1102600051", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1102600051" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1102600051">
+Successfully verified Application Criticality label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.responsibleDept()'><b>responsibleDept</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-726947864" onClick='toggleBox("Output-726947864", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-726947864" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-726947864">
+Verifyed Responsible Dept label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.riskResponse()'><b>riskResponse</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-583070988" onClick='toggleBox("Output-583070988", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-583070988" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-583070988">
+Verifyed Risk Response label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage.threatSourceDropdown()'><b>threatSourceDropdown</b><br>Test class: Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage<br/>
+<a href="#Output-2147110582" onClick='toggleBox("Output-2147110582", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2147110582" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2147110582">
+The Risk Assest Dropdown are <br/>
+The Threat Source Dropdown options from UI are <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Human<br/>
+Natural<br/>
+Error : DropDown options from UI are not matching with expected option in the excel<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage@71809907</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.assetClassLabel()'><b>assetClassLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-1272361243" onClick='toggleBox("Output-1272361243", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1272361243" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1272361243">
+Successfully verified Asset Class label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.probabilityOfOccurance()'><b>probabilityOfOccurance</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-827698971" onClick='toggleBox("Output-827698971", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-827698971" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-827698971">
+Verifyed Probability of Occurance label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.assetId()'><b>assetId</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-1482454931" onClick='toggleBox("Output-1482454931", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1482454931" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1482454931">
+Successfully verified AssetId label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToUpdateSelfRiskAssessmentQuestion.addNewSelfRiskAssessment()'><b>addNewSelfRiskAssessment</b><br>Test class: Hipaa.ToUpdateSelfRiskAssessmentQuestion<br/>
+<a href="#Output-1028644383" onClick='toggleBox("Output-1028644383", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1028644383" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1028644383">
+Verified Question Label in Self Assessment page<br/>
+Verified Save Button in Self Assessment page<br/>
+The Captured data after creating question is Testing<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>Hipaa.ToUpdateSelfRiskAssessmentQuestion@4567f35d</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.businessFunctionLabel()'><b>businessFunctionLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-1524218764" onClick='toggleBox("Output-1524218764", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1524218764" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1524218764">
+Successfully verified Business Function label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.departmentFunctionLabel()'><b>departmentFunctionLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-1092206540" onClick='toggleBox("Output-1092206540", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1092206540" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1092206540">
+Successfully verified Department Function label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.sharedLabel()'><b>sharedLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-1235863281" onClick='toggleBox("Output-1235863281", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1235863281" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1235863281">
+Successfully verified Shared label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.riskDescription()'><b>riskDescription</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-2092775013" onClick='toggleBox("Output-2092775013", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2092775013" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2092775013">
+Verifyed Risk Description label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.controlName()'><b>controlName</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-238106351" onClick='toggleBox("Output-238106351", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-238106351" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-238106351">
+Verifyed Control Name Class label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.systemOwnerLabel()'><b>systemOwnerLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-55341074" onClick='toggleBox("Output-55341074", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-55341074" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-55341074">
+Successfully verified System Owner label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.riskAssessFrequencyLabel()'><b>riskAssessFrequencyLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-1807337574" onClick='toggleBox("Output-1807337574", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1807337574" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1807337574">
+Successfully verified  Risk Assess Frequency label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.hardwareCriticalityLabel()'><b>hardwareCriticalityLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-374116627" onClick='toggleBox("Output-374116627", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-374116627" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-374116627">
+Successfully verified Hardware Criticality label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.threatSource()'><b>threatSource</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1962591263" onClick='toggleBox("Output-1962591263", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1962591263" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1962591263">
+Verifyed Threat Source label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.DropdownProbabilityofOccurance.probabilityOfOcuuranceDropdown()'><b>probabilityOfOcuuranceDropdown</b><br>Test class: Hipaa.DropdownProbabilityofOccurance<br/>
+<a href="#Output-58496922" onClick='toggleBox("Output-58496922", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-58496922" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-58496922">
+Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page<br/>
+Successfully clicked on Risk Assessment on left navigation bar in technology risks page<br/>
+The Probability of Occurance Dropdown options from UI are <br/>
+High<br/>
+Medium<br/>
+Low<br/>
+The Probability of Occurance Dropdown Options from Excel are<br/>
+High<br/>
+Medium<br/>
+Low<br/>
+Options are Matching<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>Hipaa.DropdownProbabilityofOccurance@4466af20</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.riskAssessFrequencyLabel()'><b>riskAssessFrequencyLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-164266656" onClick='toggleBox("Output-164266656", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-164266656" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-164266656">
+Successfully verified  Risk Assess Frequency label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyHRMPageComponents.riskReviewBoard()'><b>riskReviewBoard</b><br>Test class: Hipaa.ToVerifyHRMPageComponents<br/>
+<a href="#Output-468932248" onClick='toggleBox("Output-468932248", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-468932248" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-468932248">
+Successfully navigated to Risk Review Board Page upon clicking on Risk Review Board Text in HRM Page<br/>
+Successfully navigated to Risk Review Board Page upon clicking on Risk Review Board Image in HRM Page<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>Hipaa.ToVerifyHRMPageComponents@5ffead27</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.targetDate()'><b>targetDate</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1989444601" onClick='toggleBox("Output-1989444601", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1989444601" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1989444601">
+Verifyed Target Date label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.entityName()'><b>entityName</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-1507808817" onClick='toggleBox("Output-1507808817", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1507808817" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1507808817">
+Verifyed Entity Name label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToCreateANewTechnologyRiskAssessment.newTchnologyRiskAssessment()'><b>newTchnologyRiskAssessment</b><br>Test class: Hipaa.ToCreateANewTechnologyRiskAssessment<br>Parameters: [Ljava.lang.String;@233795b6<br/>
+<a href="#Output-1282027290" onClick='toggleBox("Output-1282027290", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1282027290" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1282027290">
+The Risk ID captured is RSKT687<br/>
+The captured description :The organization:
+a. Develops, documents, and disseminates to [Assignment: organization-defined personnel or roles]:
+1. An identification and authentication policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
+2. Procedures to facilitate the implementation of the identification and authentication policy and associated identification and authentication controls; and
+b. Reviews and updates the current:
+1. Identification and authentication policy [Assignment: organization-defined frequency]; and
+2. Identificatio<br/>
+The Target Quarter is :<br/>
+The Data in Edit Technology Risk Assessment Page is :<br/>
+RSKT687<br/>
+Accounts<br/>
+ToTest<br/>
+Shashank<br/>
+Audit<br/>
+Human<br/>
+Totest<br/>
+Testing<br/>
+Testing<br/>
+Confidentiality<br/>
+Low<br/>
+Access Control<br/>
+IDENTIFICATION AND AUTHENTICATION POLICY AND PROCEDURES<br/>
+The organization:
+a. Develops, documents, and disseminates to [Assignment: organization-defined personnel or roles]:
+1. An identification and authentication policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
+2. Procedures to facilitate the implementation of the identification and authentication policy and associated identification and authentication controls; and
+b. Reviews and updates the current:
+1. Identification and authentication policy [Assignment: organization-defined frequency]; and
+2. Identificatio<br/>
+Q4<br/>
+Emergency<br/>
+Mitigate<br/>
+Open<br/>
+<br/>
+</div>
+</td>
+<td></td>
+<td>67</td>
+<td>Hipaa.ToCreateANewTechnologyRiskAssessment@694abbdc</td></tr>
+<tr>
+<td title='Hipaa.ToCreateNewHardwareAsset.createNewHardwareAsset()'><b>createNewHardwareAsset</b><br>Test class: Hipaa.ToCreateNewHardwareAsset<br>Parameters: [Ljava.lang.String;@3eb738bb<br/>
+<a href="#Output-1089326748" onClick='toggleBox("Output-1089326748", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1089326748" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1089326748">
+The Risk ID captured is BVE249<br/>
+Successfully verified Success Message in Hardware Asset Page on creating a New Hardware Asset<br/>
+BVE249<br/>
+Network<br/>
+Infrastructure<br/>
+Test<br/>
+Test<br/>
+Sony<br/>
+Medium<br/>
+As<br/>
+per<br/>
+policy<br/>
+Patient<br/>
+billing<br/>
+Test<br/>
+Diagnostics<br/>
+</div>
+</td>
+<td></td>
+<td>37</td>
+<td>Hipaa.ToCreateNewHardwareAsset@4f6ee6e4</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyHRMPageComponents.physicalRiskAssessment()'><b>physicalRiskAssessment</b><br>Test class: Hipaa.ToVerifyHRMPageComponents<br/>
+<a href="#Output-653759107" onClick='toggleBox("Output-653759107", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-653759107" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-653759107">
+Successfully navigated to Physical Risk Assessment Page upon clicking on Physical Risk Assessment Text in HRM Page<br/>
+Successfully navigated to Physical Risk Assessment Page upon clicking on Physical Risk Assessment Image in HRM Page<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>Hipaa.ToVerifyHRMPageComponents@5ffead27</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.riskInput()'><b>riskInput</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-449220656" onClick='toggleBox("Output-449220656", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-449220656" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-449220656">
+Verifyed Risk Input label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.systemOwnerLabel()'><b>systemOwnerLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-163206733" onClick='toggleBox("Output-163206733", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-163206733" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-163206733">
+Successfully verified System Owner label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage.nameOfApplicationLabel()'><b>nameOfApplicationLabel</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage<br/>
+<a href="#Output-470085884" onClick='toggleBox("Output-470085884", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-470085884" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-470085884">
+Successfully verified Name of Application label under Software Inventory Details in Software Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInSoftwareAssetPage@6356695f</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage.riskImpactDropdown()'><b>riskImpactDropdown</b><br>Test class: Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage<br/>
+<a href="#Output-1128544824" onClick='toggleBox("Output-1128544824", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1128544824" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1128544824">
+The Risk Assest Dropdown are <br/>
+The Risk Impact Dropdown options from UI are <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Integrity<br/>
+Confidentiality<br/>
+Availability<br/>
+Error : DropDown options from UI are not matching with expected option in the excel<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheDropdownOptionsInNewRiskPage@71809907</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage.type()'><b>type</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage<br/>
+<a href="#Output-1441558674" onClick='toggleBox("Output-1441558674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1441558674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1441558674">
+Successfully verified Type label under Hardware Inventory Details in Hardware Asset Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInHardwareAssetPage@359f7cdf</td></tr>
+<tr>
+<td title='Hipaa.ToVerifyAllTheLabelsInNewRiskPage.assessed()'><b>assessed</b><br>Test class: Hipaa.ToVerifyAllTheLabelsInNewRiskPage<br/>
+<a href="#Output-890828519" onClick='toggleBox("Output-890828519", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-890828519" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-890828519">
+Verifyed Assessed label in New Page<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Hipaa.ToVerifyAllTheLabelsInNewRiskPage@3e58a80e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Hipaa.ToVerifyLeftNavigationBarFunctionality.technologyRiskNavBar()'><b>technologyRiskNavBar</b><br>Test class: Hipaa.ToVerifyLeftNavigationBarFunctionality</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=112.0.5615.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a7284d56439250fe0526bb49c224c9f
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+	at Generic_Liberary.BaseClass.driver(BaseClass.java:93)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1962731062", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1962731062'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=112.0.5615.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SHASHANK&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a7284d56439250fe0526bb49c224c9f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+	at Generic_Liberary.BaseClass.driver(BaseClass.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Hipaa.ToVerifyLeftNavigationBarFunctionality@1fa268de</td></tr>
+</table><p>
+</body>
+</html>

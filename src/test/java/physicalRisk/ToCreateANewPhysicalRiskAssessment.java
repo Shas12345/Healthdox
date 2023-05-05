@@ -43,7 +43,7 @@ public class ToCreateANewPhysicalRiskAssessment extends BaseClass {
 		String riskId = basePg.getRiskIdTextBox().getAttribute("value");
 		Reporter.log("The Risk ID captured is " + riskId, true);
 		// Reading the data from excel and selecting the drop down option
-		data.handleDropdownByText(explicit, driver, adminPg.getRiskAgentDropdown(), info[0]);
+		data.handleDropdownByText(explicit, driver, physicalPg.getRiskAgentDropdown(), info[0]);
 		// Entering the Data into DepartmentName
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getDepartmentNameTextBox()));
 		basePg.getDepartmentNameTextBox().sendKeys(info[1]);
@@ -261,7 +261,6 @@ public class ToCreateANewPhysicalRiskAssessment extends BaseClass {
 		try {
 			fis = new FileInputStream("./TestData/HIPAA.xlsx");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
@@ -277,12 +276,11 @@ public class ToCreateANewPhysicalRiskAssessment extends BaseClass {
 		// Get physical number of rows
 		int rows = sheet.getPhysicalNumberOfRows();
 		// Get Physical number of cells
-		int cells = sheet.getRow(0).getPhysicalNumberOfCells();
+		int cells = sheet.getRow(1).getPhysicalNumberOfCells();
 		data = new String[rows - 1][cells];
 		for (int i = 1; i < rows; i++) {
 			for (int j = 0; j < cells; j++) {
 				String cellData = formatter.formatCellValue(sheet.getRow(i).getCell(j));
-				;
 				data[i - 1][j] = cellData;
 			}
 

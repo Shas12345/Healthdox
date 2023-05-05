@@ -233,7 +233,6 @@ public class ToCreateANewTechnologyRiskAssessment extends BaseClass {
 		for (int i = 1; i < rows; i++) {
 			for (int j = 0; j < cells; j++) {
 				String cellData = formatter.formatCellValue(sheet.getRow(i).getCell(j));
-				;
 				data[i - 1][j] = cellData;
 			}
 

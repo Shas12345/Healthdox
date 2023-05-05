@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import Generic_Liberary.BaseClass;
 import Generic_Liberary.ReadData;
 
-public class ToTestSelfRiskAssessmentQuestion extends BaseClass {
+public class ToTestSearchInSelfRiskAssessmentQuestion extends BaseClass {
 
 	@Test
 	public void search() throws InterruptedException {

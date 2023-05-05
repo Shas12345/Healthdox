@@ -10,7 +10,7 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownImpactLevel extends BaseClass {
 	@Test
-	public void impactLevelDropdown() {
+	public void impactLevelDropdownInPhysicalRisk() {
 		hrmPg.getPhysicalRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Physical Risk Assessment text on Hipaa Risk Management Page", true);
 		// Verifying Risk Assessment section and performing clicking action

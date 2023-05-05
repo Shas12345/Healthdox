@@ -212,7 +212,7 @@ public class BaseClass {
 	@BeforeSuite
 	public void initialiseExtendReports() {
 
-		ExtentSparkReporter sparkReporter = new ExtentSparkReporter("AllTests.html");
+		ExtentSparkReporter sparkReporter = new ExtentSparkReporter("Result.html");
 		// creating object for extent report
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(sparkReporter);
@@ -223,7 +223,7 @@ public class BaseClass {
 	@AfterSuite
 	public void generateExtentReports() throws IOException {
 		extentReports.flush();
-		Desktop.getDesktop().browse(new File("AllTests.html").toURI());
+		Desktop.getDesktop().browse(new File("Result.html").toURI());
 	}
 
 	@AfterMethod

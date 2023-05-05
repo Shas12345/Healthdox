@@ -8,7 +8,7 @@ import Generic_Liberary.BaseClass;
 
 public class Demo extends BaseClass {
 	@Test
-	public void graph() throws InterruptedException {
+	public void graphInPhysicalRisk() throws InterruptedException {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 	driver.findElement(By.id("chas")).click();
 		//driver.findElement(By.xpath("//div[@class='shas']")).click();

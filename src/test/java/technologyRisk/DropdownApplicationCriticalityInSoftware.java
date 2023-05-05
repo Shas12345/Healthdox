@@ -9,12 +9,12 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownApplicationCriticalityInSoftware extends BaseClass{
 	@Test
-	public void applicationCriticalityDropdown() {
+	public void applicationCriticalityDropdownInSoftwareAsset() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
-		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Asset Inventory section and performing clicking action
 		basePg.getAssetInventorytLeftNavBar().click();
-		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in technology risks page");
 		// Verifying Software Asset and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getSoftwareAsset()));
 		softassert.assertEquals(basePg.getSoftwareAsset().isDisplayed(), true,
@@ -26,6 +26,7 @@ public class DropdownApplicationCriticalityInSoftware extends BaseClass{
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("ApplicationCriticality_chosen")));
 		softwarePg.getApplicationCriticalityDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Application Criticality","Software");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }

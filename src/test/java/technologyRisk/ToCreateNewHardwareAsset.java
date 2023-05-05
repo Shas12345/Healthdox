@@ -45,6 +45,7 @@ public class ToCreateNewHardwareAsset extends BaseClass {
 		// Capturing the Asset Id from the TextBox
 		String assetId = hardwarepg.getAssetIdTextBox().getAttribute("value");
 		Reporter.log("The Risk ID captured is " + assetId, true);
+		extentTest.info("The Risk ID captured is " + assetId);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, hardwarepg.getAssetClassDropdown(), info[0]);
 		// Entering the Data into Name of Application
@@ -73,6 +74,7 @@ public class ToCreateNewHardwareAsset extends BaseClass {
 		// data.fromPropertyFile("successMessageOnHAP"));
 		Reporter.log("Successfully verified Success Message in Hardware Asset Page on creating a New Hardware Asset",
 				true);
+		extentTest.pass("Successfully created New Hardware Asset");
 
 		for (;;) {
 			try {

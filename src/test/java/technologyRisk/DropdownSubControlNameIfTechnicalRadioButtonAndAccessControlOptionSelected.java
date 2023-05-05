@@ -10,13 +10,15 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownSubControlNameIfTechnicalRadioButtonAndAccessControlOptionSelected  extends BaseClass{
 	@Test
-	public void	subControlNameDropdown() {
+	public void	dropdownSubControlNameIfTechnicalRadioButtonAndAccessControlOptionSelected() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Risk Assessment section and performing clicking action
 		basePg.getRiskAssessmentLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in technology risks page");
 		// Verifying New Risk section and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getNewRisk()));
 		softassert.assertEquals(basePg.getNewRisk().isDisplayed(), true,
@@ -34,6 +36,7 @@ public class DropdownSubControlNameIfTechnicalRadioButtonAndAccessControlOptionS
 		driver.findElement(By.xpath("//li[text()='Access Control']")).click();
 		basePg.getSubControlNameDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Technical Access Control Sub Control Name","Technology");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }

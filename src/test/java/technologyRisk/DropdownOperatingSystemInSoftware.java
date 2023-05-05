@@ -9,12 +9,14 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownOperatingSystemInSoftware extends BaseClass{
 	@Test
-	public void operatingSystemDropdown() {
+	public void operatingSystemDropdownInSoftwareAsset() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Asset Inventory section and performing clicking action
 		basePg.getAssetInventorytLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in technology risks page");
 		// Verifying Software Asset and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getSoftwareAsset()));
 		softassert.assertEquals(basePg.getSoftwareAsset().isDisplayed(), true,
@@ -26,6 +28,7 @@ public class DropdownOperatingSystemInSoftware extends BaseClass{
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("Os_chosen")));
 		softwarePg.getOperatingSystemDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Operating System","Software");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }

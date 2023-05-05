@@ -1,6 +1,5 @@
 package technologyRisk;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -30,6 +29,7 @@ public class ToVerifyComponentsInKriDashboardPage extends BaseClass {
 			value++;
 		}
 		Reporter.log("Header is matching", true);
+		extentTest.info("Header is matching");
 	}
 
 }

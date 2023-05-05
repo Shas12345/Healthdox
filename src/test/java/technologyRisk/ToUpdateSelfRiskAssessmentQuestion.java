@@ -1,17 +1,10 @@
 package technologyRisk;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import Generic_Liberary.BaseClass;
 
@@ -19,7 +12,7 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 	public String questionData = data.fromExcel("SelfAssessmentQuestrion", 1, 0);
 
 	@Test
-	public void addNewSelfRiskAssessment() {
+	public void addNewSelfRiskAssessmentInTechnologyRisk() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		// Clicking on System Configuration
 		basePg.getSystemConfiguration().click();
@@ -34,12 +27,14 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 		softassert.assertEquals(selfRiskQuestionPg.getQuestionLabel().isDisplayed(), true,
 				"Question Label is not provided in self assessment page");
 		Reporter.log("Verified Question Label in Self Assessment page", true);
+		extentTest.info("Verified Question Label in Self Assessment page");
 		selfRiskQuestionPg.getQuestionTextBox().sendKeys(questionData);
 
 		// Verifying and Clicking on save Button
 		softassert.assertEquals(selfRiskQuestionPg.getSaveButton().isDisplayed(), true,
 				"Save Button is not provided in self assessment page");
 		Reporter.log("Verified Save Button in Self Assessment page", true);
+		extentTest.info("Verified Save Button in Self Assessment page");
 		selfRiskQuestionPg.getSaveButton().click();
 
 		for (;;) {
@@ -68,6 +63,7 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 		softassert.assertEquals(selfRiskQuestionPg.getSaveButton().isDisplayed(), true,
 				"Save button is not provided in edit popup");
 		Reporter.log("Verified save button", true);
+		extentTest.info("Verified save button");
 		selfRiskQuestionPg.getSaveButton().click();
 
 		// Verifying the pop up
@@ -77,7 +73,7 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 	}
 
 	@Test(dependsOnMethods = "addNewSelfRiskAssessment")
-	public void deleteSelfRiskAssessment() throws InterruptedException {
+	public void deleteSelfRiskAssessmentInTechnologyRisk() throws InterruptedException {
 		driver.findElement(By.xpath("(//button[@title='Close'])[2]")).click();
 		Thread.sleep(3000);
 		try {

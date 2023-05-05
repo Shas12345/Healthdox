@@ -13,10 +13,12 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
+
 import Generic_Liberary.BaseClass;
 
 public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
@@ -30,7 +32,7 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData")
-	public void newTchnologyRiskAssessment(String info[]) throws InterruptedException {
+	public void createNewAdministrativeRiskAssessment(String info[]) throws InterruptedException {
 		for (int i = 0; i < info.length; i++) {
 			expected.add(info[i]);
 		}
@@ -43,6 +45,7 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		// Capturing the Risk Id from the TextBox
 		String riskId = basePg.getRiskIdTextBox().getAttribute("value");
 		Reporter.log("The Risk ID captured is " + riskId, true);
+		extentTest.info("The Risk ID captured is " + riskId);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, adminPg.getRiskAgentDropdown(), info[0]);
 		// Entering the Data into DepartmentName
@@ -95,6 +98,7 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		Thread.sleep(1000);
 		String description = basePg.getDescriptionTextBox().getAttribute("value");
 		Reporter.log("The captured description :" + description, true);
+		extentTest.info("The captured description :" + description);
 		// Entering the Data into New Controls TextBox
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getActionProposedTextBox()));
 		basePg.getActionProposedTextBox().sendKeys(info[16]);
@@ -105,11 +109,14 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		basePg.getTargetDateTextBox().sendKeys(info[18], Keys.ENTER);
 		// Capturing description from Text Box
 		explicit.until(ExpectedConditions.visibilityOf(basePg.getActionProposedTextBox()));
-		String quarter = basePg.getTargetQurterTextBox().getAttribute("value");
-		Reporter.log("The Target Quarter is :" + quarter, true);
+	
 		// Reading the data from excel and selecting the drop down option
 		js.executeScript("arguments[0].scrollIntoView(false)", adminPg.getSaveButton());
 		data.handleDropdownByText(explicit, driver, basePg.getResponsibleDebtDropdown(), info[19]);
+		//capturing quarter data
+		String quarter = basePg.getTargetQurterTextBox().getAttribute("value");
+		Reporter.log("The Target Quarter is :" + quarter, true);
+		extentTest.info("The Target Quarter is :" + quarter);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, basePg.getRiskResponseDropdown(), info[20]);
 		// Reading the data from excel and selecting the drop down option

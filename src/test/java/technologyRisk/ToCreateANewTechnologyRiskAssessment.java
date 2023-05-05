@@ -42,6 +42,7 @@ public class ToCreateANewTechnologyRiskAssessment extends BaseClass {
 		// Capturing the Risk Id from the TextBox
 		String riskId = basePg.getRiskIdTextBox().getAttribute("value");
 		Reporter.log("The Risk ID captured is " + riskId, true);
+		extentTest.info("The Risk ID captured is " + riskId);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, basePg.getRiskAssetDropdown(), info[0]);
 		// Entering the Data into DepartmentName
@@ -88,6 +89,7 @@ public class ToCreateANewTechnologyRiskAssessment extends BaseClass {
 		Thread.sleep(2000);
 		String description = basePg.getDescriptionTextBox().getAttribute("value");
 		Reporter.log("The captured description :" + description, true);
+		extentTest.info("The captured description :" + description);
 		// Entering the Data into New Controls TextBox
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getActionProposedTextBox()));
 		basePg.getActionProposedTextBox().sendKeys(info[16]);

@@ -8,7 +8,7 @@ import Generic_Liberary.BaseClass;
 public class ToVerifyCollapsedStateOptions extends BaseClass {
 
 	@Test
-	public void collapseFunctionality() {
+	public void collapseFunctionalityofNavBarInTechnologyRisk() {
 		// Clicking on technology risk on HRMS Page
 
 		// Verifying all options in the collapsed state

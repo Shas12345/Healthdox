@@ -16,6 +16,9 @@ import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -23,8 +26,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestContext;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 /***
  * 
@@ -33,6 +40,9 @@ import org.testng.annotations.DataProvider;
  */
 
 public class ReadData {
+	public ExtentReports extentReports;
+	public ExtentTest extentTest;
+
 	/**
 	 * This method helps us to read data from property file
 	 * 
@@ -63,7 +73,7 @@ public class ReadData {
 		FileInputStream fis = null;
 		Workbook workbook = null;
 		try {
-			fis = new FileInputStream(new File("./TestData/HIPAA.xlsx"));
+			fis = new FileInputStream(new File("./TestData/Dropdown2.xlsx"));
 			workbook = WorkbookFactory.create(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -252,7 +262,7 @@ public class ReadData {
 	}
 
 	// method to handle dropdown
-	public boolean checkDropDownListfromUIAndExcel(WebDriver driver, String ddname,String sheetname) {
+	public boolean checkDropDownListfromUIAndExcel(WebDriver driver, String ddname, String sheetname) {
 
 		// getting expected and actual options from excel and ui
 		ArrayList<String> expectedList = new ArrayList<String>();
@@ -296,7 +306,6 @@ public class ReadData {
 		try {
 			workBook.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		List<WebElement> ls = driver.findElements(By.xpath("//li[@class='active-result']"));
@@ -316,20 +325,21 @@ public class ReadData {
 					continue;
 				} else {
 					Reporter.log("===========Mismatched between options ============ " + "\n" + "Expected===> "
-							+ expectedList.get(i) + " Actual===> " + actualList.get(i),true);
+							+ expectedList.get(i) + " Actual===> " + actualList.get(i), true);
 					counter++;
 				}
 			}
 			if (counter == 0) {
 				Reporter.log("Options are Matching", true);
+				result = true;
 			} else {
 				Reporter.log("Options are not Matching", true);
 				result = false;
 			}
 
 		} else
-		//Reporter.log("Error : DropDown options from UI are not matching with expected option in the excel", true);
-		result = false;
+			 Reporter.log("Error : DropDown options from UI are not matching with expected option in the excel", true);
+			result = false;
 
 		return result;
 
@@ -428,5 +438,75 @@ public class ReadData {
 			}
 
 		}
+	}
+
+	public boolean checkDDListFromUIAndExcel(WebDriver driver, String ddname, String sheetName) {
+		int cellNum = 0;
+		int counter = 0;
+		boolean result = true;
+		ArrayList<String> expectedList = new ArrayList<String>();
+		ArrayList<String> actualList = new ArrayList<String>();
+		File f = new File("./TestData/Dropdown.xlsx");
+		try {
+			FileInputStream fis = new FileInputStream(f);
+			XSSFWorkbook wb = new XSSFWorkbook(fis);
+			XSSFSheet sheet = wb.getSheet(sheetName);
+
+			int totalCells = sheet.getRow(0).getPhysicalNumberOfCells();
+			for (int i = 0; i < totalCells; i++) {
+				String currentCellData = sheet.getRow(0).getCell(i).getStringCellValue();
+				if (currentCellData.equalsIgnoreCase(ddname)) {
+					cellNum = i;
+					break;
+				}
+			}
+			int totalRows = sheet.getPhysicalNumberOfRows();
+			for (int j = 1; j < totalRows; j++) {
+				XSSFCell cell = sheet.getRow(j).getCell(cellNum);
+				if (cell == null || cell.getCellType() == CellType.BLANK) {
+					break;
+				}
+				String cellData = sheet.getRow(j).getCell(cellNum).getStringCellValue();
+				expectedList.add(cellData);
+			}
+			wb.close();
+			List<WebElement> ls = driver.findElements(By.xpath("//li[@class='active-result']"));
+			for (WebElement ele : ls) {
+				String optionName = ele.getText();
+				actualList.add(optionName);
+			}
+			// comparing
+			if (expectedList.size() == actualList.size()) {
+				Reporter.log("The " + ddname + " Dropdown Options from Excel are", true);
+				for (int i = 0; i < expectedList.size(); i++) {
+					if (expectedList.get(i).equalsIgnoreCase(actualList.get(i))) {
+						Reporter.log(expectedList.get(i), true);
+						continue;
+					} else {
+						Reporter.log("===========Mismatched between options ============ " + "\n" + "Expected===> "
+								+ expectedList.get(i) + "\n" + " Actual===> " + actualList.get(i), true);
+						counter++;
+					}
+				}
+				if (counter == 0) {
+					Reporter.log("Options are Matching", true);
+					result = true;
+				} else {
+					Reporter.log("Options are not Matching", true);
+					result = false;
+				}
+
+			} else
+				Reporter.log("Error : DropDown options from UI are not matching with expected option in the excel",
+						true);
+			result = false;
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		return result;
+
 	}
 }

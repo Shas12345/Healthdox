@@ -9,7 +9,7 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownBusinessFunctionInSoftware extends BaseClass {
 	@Test
-	public void businessFunctionDropdown() {
+	public void businessFunctionDropdownInSoftwarAsset() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
 		// Verifying Asset Inventory section and performing clicking action
@@ -26,6 +26,7 @@ public class DropdownBusinessFunctionInSoftware extends BaseClass {
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("BusinessFunction_chosen")));
 		softwarePg.getBusinessFunctionDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Business Function", "Software");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }

@@ -9,12 +9,14 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownDepartmentFunctionInSoftware extends BaseClass {
 	@Test
-	public void departmentFunctionDropdown() {
+	public void departmentFunctionDropdownInSoftwareAsset() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Asset Inventory section and performing clicking action
 		basePg.getAssetInventorytLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in technology risks page");
 		// Verifying Software Asset and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getSoftwareAsset()));
 		softassert.assertEquals(basePg.getSoftwareAsset().isDisplayed(), true,
@@ -26,6 +28,8 @@ public class DropdownDepartmentFunctionInSoftware extends BaseClass {
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("Department_chosen")));
 		softwarePg.getDepartmentDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "DepartmentFunction", "Software");
+		extentTest.pass("The Dropdown options are matching");
+		
 	}
 
 }

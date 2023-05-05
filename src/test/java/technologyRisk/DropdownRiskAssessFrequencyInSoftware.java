@@ -9,12 +9,14 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownRiskAssessFrequencyInSoftware extends BaseClass {
 	@Test
-	public void riskAssessFrequencyDropdown() {
+	public void riskAssessFrequencyDropdownInSoftwareAsset() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Asset Inventory section and performing clicking action
 		basePg.getAssetInventorytLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in technology risks page");
 		// Verifying Software Asset and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getSoftwareAsset()));
 		softassert.assertEquals(basePg.getSoftwareAsset().isDisplayed(), true,
@@ -26,6 +28,7 @@ public class DropdownRiskAssessFrequencyInSoftware extends BaseClass {
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("RiskAssessFreq_chosen")));
 		softwarePg.getRiskAssessFreqDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Risk assess frequency", "Software");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }

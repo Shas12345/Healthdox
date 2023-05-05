@@ -10,12 +10,14 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownProbabilityofOccurance extends BaseClass{
  @Test
- public void probabilityOfOcuuranceDropdown() {
+ public void probabilityOfOcuuranceDropdownInTechnologyRisk() {
 	 hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Risk Assessment section and performing clicking action
 		basePg.getRiskAssessmentLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in technology risks page");
 		// Verifying New Risk section and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getNewRisk()));
 		Assert.assertEquals(basePg.getNewRisk().isDisplayed(), true,
@@ -25,5 +27,6 @@ public class DropdownProbabilityofOccurance extends BaseClass{
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("ProbabilityofOccurence_chosen")));
 		basePg.getProbabilityOfOccuranceDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Probability of Occurance","Technology");
+		extentTest.pass("The Dropdown options are matching");
  }
 }

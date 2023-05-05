@@ -31,7 +31,7 @@ public class ToApproveTheRisk extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData")
-	public void toApproveTechnologyRiskAssessment(String info[]) throws InterruptedException {
+	public void toApproveAndEditAndDeleteTechnologyRiskAssessment(String info[]) throws InterruptedException {
 		for (int i = 0; i < info.length; i++) {
 			expected.add(info[i]);
 		}
@@ -154,6 +154,7 @@ public class ToApproveTheRisk extends BaseClass {
 		softassert.assertEquals("Failed to approve the Risk assessment details",
 				"Successfully approved the Risk assessment details", "Not able to aprove the risk");
 		Reporter.log("User is not able to approve the technology risk in Risk Review Board", true);
+		extentTest.fail("User is not able to approve the technology risk in Risk Review Board");
 		explicit.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("(//td[contains(text(),'" + riskId + "')]/..//a[contains(@onClick,'" + riskId + "')])[2]")));
 		// clicking on Delete button
@@ -194,6 +195,7 @@ public class ToApproveTheRisk extends BaseClass {
 		softassert.assertEquals("Failed to delete the Risk assessment details",
 				"Successfully deleted the Risk assessment details", "Not able to delete the risk");
 		Reporter.log("User is not able to delete the Technology risk in Risk Review Board", true);
+		extentTest.fail("User is not able to delete the Technology risk in Risk Review Board");
 		// clicking on edit button
 		explicit.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("(//td[contains(text(),'" + riskId + "')]/..//a[contains(@onClick,'" + riskId + "')])[1]")));
@@ -233,6 +235,7 @@ public class ToApproveTheRisk extends BaseClass {
 		softassert.assertEquals("Failed to edit the Risk assessment details",
 				"Successfully edited the Risk assessment details", "Not able to edit the risk");
 		Reporter.log("User is not able to edit the Technology risk in Risk Review Board", true);
+		extentTest.fail("User is not able to edit the Technology risk in Risk Review Board");
 
 		driver.navigate().back();
 		driver.navigate().back();

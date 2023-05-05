@@ -9,7 +9,7 @@ import Generic_Liberary.BaseClass;
 
 public class DropdowncontrolNameIfManagementRadioButtonSelected  extends BaseClass{
 	@Test
-	public void controlNameDropdown() {
+	public void dropdowncontrolNameIfManagementRadioButtonSelectedInTechnologyRisk() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
@@ -31,6 +31,7 @@ public class DropdowncontrolNameIfManagementRadioButtonSelected  extends BaseCla
 		js.executeScript("arguments[0].scrollIntoView(false)", basePg.getResponsibleLabel());
 		basePg.getControlNameDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Management Control Name","Technology");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }

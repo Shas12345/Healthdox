@@ -7,14 +7,16 @@ import org.testng.annotations.Test;
 
 import Generic_Liberary.BaseClass;
 
-public class DropdownRiskAssetClass extends BaseClass{
+public class DropdownRiskAssetClass extends BaseClass {
 	@Test
-	public void riskAssetClassDropdown() {
+	public void riskAssetClassDropdownInTechnologyRisk() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Risk Assessment section and performing clicking action
 		basePg.getRiskAssessmentLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in technology risks page");
 		// Verifying New Risk section and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getNewRisk()));
 		softassert.assertEquals(basePg.getNewRisk().isDisplayed(), true,
@@ -22,8 +24,8 @@ public class DropdownRiskAssetClass extends BaseClass{
 		basePg.getNewRisk().click();
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("RiskAgent_chosen")));
 		basePg.getRiskAssetDropdown().click();
-		data.checkDropDownListfromUIAndExcel(driver, "Risk Asset Class","Technology");
+		data.checkDropDownListfromUIAndExcel(driver, "Risk Asset Class", "Technology");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }
-

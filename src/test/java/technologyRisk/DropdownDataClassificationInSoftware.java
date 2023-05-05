@@ -9,12 +9,15 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownDataClassificationInSoftware extends BaseClass {
 	@Test
-	public void dataClassificationDropdown() {
+	public void dataClassificationDropdownInSoftwareAsset() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
+
 		// Verifying Asset Inventory section and performing clicking action
 		basePg.getAssetInventorytLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in technology risks page");
 		// Verifying Software Asset and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getSoftwareAsset()));
 		softassert.assertEquals(basePg.getSoftwareAsset().isDisplayed(), true,
@@ -26,6 +29,7 @@ public class DropdownDataClassificationInSoftware extends BaseClass {
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("DataClassification_chosen")));
 		softwarePg.getDataClassificationDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Data Classification", "Software");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }

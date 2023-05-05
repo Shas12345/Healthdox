@@ -43,6 +43,7 @@ public class ToCreateNewSoftwareAsset extends BaseClass{
 		// Capturing the Asset Id from the TextBox
 				String assetId = softwarePg.getAssetIdTextBox().getAttribute("value");
 				Reporter.log("The Risk ID captured is " + assetId, true);
+				extentTest.info("The Risk ID captured is " + assetId);
 				// Reading the data from excel and selecting the drop down option
 				data.handleDropdownByText(explicit, driver, softwarePg.getAssetClassDropdown(), info[0]);
 				// Entering the Data into Name of Application
@@ -67,6 +68,7 @@ public class ToCreateNewSoftwareAsset extends BaseClass{
 				data.handleDropdownByText(explicit, driver, softwarePg.getDepartmentDropdown(), info[10]);
 				//Clicking on Save Button.
 				softwarePg.getSaveButton().click();
+				extentTest.pass("Successfully created New Software Asset");
 				
 				driver.navigate().back();
 				driver.navigate().back();
@@ -81,7 +83,6 @@ public class ToCreateNewSoftwareAsset extends BaseClass{
 		try {
 			fis = new FileInputStream("./TestData/HIPAA.xlsx");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {

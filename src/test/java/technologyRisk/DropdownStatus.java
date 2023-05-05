@@ -9,12 +9,14 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownStatus extends BaseClass {
 	@Test
-	public void statusDropdown() {
+	public void statusDropdownInTechnologyRisk() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Risk Assessment section and performing clicking action
 		basePg.getRiskAssessmentLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in Technology risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in Technology risks page");
 		// Verifying New Risk section and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getNewRisk()));
 		softassert.assertEquals(basePg.getNewRisk().isDisplayed(), true,
@@ -24,6 +26,7 @@ public class DropdownStatus extends BaseClass {
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("Status_chosen")));
 		basePg.getStatusDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Status","Technology");
+		extentTest.pass("The Dropdown options are matching");
 	}
 
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="technologyRisk.DropdowncontrolNameIfManagementRadioButtonSelected"/>
+      <class name="technologyRisk.DropdownRiskAssetClass"/>
+      <class name="technologyRisk.DropdownApplicationCriticalityInSoftware"/>
+      <class name="technologyRisk.DropdownRisInput"/>
+      <class name="technologyRisk.DropdownDataClassificationInSoftware"/>
+      <class name="technologyRisk.DropdownDepartmentFunctionInSoftware"/>
+      <class name="technologyRisk.TableCollpaseFunctionality"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndMaintenanceOptionSelected"/>
+      <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndIdentificationAndAuthenticationOptionSelected"/>
+      <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndSystemAndCommunicationsProtectionOptionSelected"/>
+      <class name="technologyRisk.DropdownRiskAssessFrequencyInHardware"/>
+      <class name="technologyRisk.ToVerifyHRMPageComponents"/>
+      <class name="technologyRisk.DropdownBusinessFunctionInSoftware"/>
+      <class name="technologyRisk.DropdowncontrolNameIfOperationalRadioButtonSelected"/>
+      <class name="technologyRisk.DropdownProbabilityofOccurance"/>
+      <class name="technologyRisk.DropdownOperatingSystemInSoftware"/>
+      <class name="technologyRisk.DropdownRiskResponse"/>
+      <class name="technologyRisk.DropdownImpactLevel"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndPhysicalAndEnvironmentalProtectionOptionSelected"/>
+      <class name="technologyRisk.ToCreateNewSoftwareAsset"/>
+      <class name="technologyRisk.DropdownBusinessFunctionInHardware"/>
+      <class name="technologyRisk.DropdownStatus"/>
+      <class name="technologyRisk.ToCreateANewTechnologyRiskAssessment"/>
+      <class name="technologyRisk.DropdownSubControlNameIfManagementRadioButtonAndSystemAndServicesAcquisitionOptionSelected"/>
+      <class name="technologyRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndMediaProtectionOptionSelected"/>
+      <class name="technologyRisk.DropdownSubControlNameIfManagementRadioButtonAndPlanningOptionSelected"/>
+      <class name="technologyRisk.ToVerifyLeftNavigationBarFunctionality"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndContingencyPlaningOptionSelected"/>
+      <class name="technologyRisk.DropdownSubControlNameIfManagementRadioButtonAndRiskAssessmentOptionSelected"/>
+      <class name="technologyRisk.ToTestSearchInSelfRiskAssessmentQuestion"/>
+      <class name="technologyRisk.DropdownRiskAssessFrequencyInSoftware"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndPersonnelSecurityOptionSelected"/>
+      <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndAccessControlOptionSelected"/>
+      <class name="technologyRisk.DropdownHardwareCriticalityInHardware"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndSystemAndInfoemationIntegrityOptionSelected"/>
+      <class name="technologyRisk.ToCreateNewHardwareAsset"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndConfigurationManagementOptionSelected"/>
+      <class name="technologyRisk.DropdownRiskImpactCategory"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndAwarenessAndTrainingOptionSelected"/>
+      <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndAuditAndAccountabilityOptionSelected"/>
+      <class name="technologyRisk.DropdownThreatSource"/>
+      <class name="technologyRisk.DropdownRiskAssetClassInSoftware"/>
+      <class name="technologyRisk.DropdownResponsibleDept"/>
+      <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndIncidentResponseOptionSelected"/>
+      <class name="technologyRisk.ToApproveTheRisk"/>
+      <class name="technologyRisk.ToUpdateSelfRiskAssessmentQuestion"/>
+      <class name="technologyRisk.ToVerifyAllTheLabelsInHardwareAssetPage"/>
+      <class name="technologyRisk.DropdownRiskAssetClassInHardware"/>
+      <class name="technologyRisk.DropdowncontrolNameIfTechnicalRadioButtonSelected"/>
+      <class name="technologyRisk.DropdownDepartmentFunctionInHardware"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -25,6 +25,7 @@ public class ToTestSearchInSelfRiskAssessmentQuestion extends BaseClass {
 		Thread.sleep(2000);
 		List<WebElement> searchedData = driver.findElements(By.xpath("//tr[@role='row' and @class]"));
 		Reporter.log("The Related Searched  data is :", true);
+		extentTest.info("The Related Searched  data is :");
 		for (WebElement data : searchedData) {
 			try {
 				explicit.until(ExpectedConditions.visibilityOfAllElements(searchedData));
@@ -33,8 +34,8 @@ public class ToTestSearchInSelfRiskAssessmentQuestion extends BaseClass {
 				selfRiskQuestionPg.getSearchTextBox()
 						.sendKeys(((ReadData) data).fromExcel("SelfAssessmentQuestrion", 1, 2));
 				Reporter.log(data.getText(), true);
+				extentTest.info(data.getText());
 			}
-			Reporter.log(data.getText(), true);
 		}
 
 	}

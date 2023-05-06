@@ -24,16 +24,21 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestClass;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
+import org.testng.internal.annotations.ITest;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -52,8 +57,8 @@ import POM.TechnologyRiskAssessmentPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	public ExtentReports extentReports;
-	public ExtentTest extentTest;
+	public static ExtentReports extentReports;
+	public static ExtentTest extentTest;
 	public String screenShotsSubFolderName;
 
 	public WebDriver driver;
@@ -128,7 +133,7 @@ public class BaseClass {
 		softassert = new SoftAssert();
 
 		//
-		
+
 		extentTest.assignAuthor(author);
 		extentTest.assignDevice(device);
 
@@ -230,11 +235,12 @@ public class BaseClass {
 	public void quit(Method m, ITestResult result) {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
-			String screenShotPath = null;
+			String screenShotPath =null;
 			screenShotPath = captureScreenShot(
 					result.getTestContext().getName() + "_" + result.getMethod().getMethodName() + ".png");
 			extentTest.addScreenCaptureFromPath(screenShotPath);
 			extentTest.fail(result.getThrowable());
+
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			extentTest.pass(m.getName() + " is passed");
 		}

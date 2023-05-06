@@ -1,12 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Table Collpase Functionality In Technology Risk(failed)">
+    <classes>
+      <class name="technologyRisk.TableCollpaseFunctionality">
+        <methods>
+          <include name="initialiseExtendReports"/>
+          <include name="verifyTableCollapseOnTechnologyRiskAssessmentPage"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.TableCollpaseFunctionality -->
+    </classes>
+  </test> <!-- Table Collpase Functionality In Technology Risk(failed) -->
+  <test thread-count="5" name="Dropdown Sub Control Name If Technical Radio Button And Identification And Authentication Option Selected(failed)">
+    <classes>
+      <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndIdentificationAndAuthenticationOptionSelected">
+        <methods>
+          <include name="dropdownSubControlNameIfTechnicalRadioButtonAndIdentificationAndAuthenticationOptionSelected"/>
+          <include name="initialiseExtendReports"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndIdentificationAndAuthenticationOptionSelected -->
+    </classes>
+  </test> <!-- Dropdown Sub Control Name If Technical Radio Button And Identification And Authentication Option Selected(failed) -->
+  <test thread-count="5" name="To Verify HRM Page Components(failed)">
+    <classes>
+      <class name="technologyRisk.ToVerifyHRMPageComponents">
+        <methods>
+          <include name="physicalRiskAssessment"/>
+          <include name="technologyRiskAssessment"/>
+          <include name="initialiseExtendReports"/>
+          <include name="administrativeRiskAssessment"/>
+          <include name="riskReviewBoard"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.ToVerifyHRMPageComponents -->
+    </classes>
+  </test> <!-- To Verify HRM Page Components(failed) -->
+  <test thread-count="5" name="Dropdown Business Function Options In Software Asset(failed)">
+    <classes>
+      <class name="technologyRisk.DropdownBusinessFunctionInSoftware">
+        <methods>
+          <include name="initialiseExtendReports"/>
+          <include name="businessFunctionDropdownInSoftwarAsset"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.DropdownBusinessFunctionInSoftware -->
+    </classes>
+  </test> <!-- Dropdown Business Function Options In Software Asset(failed) -->
+  <test thread-count="5" name="To Verify Left Navigation Bar Functionality In Technology Risk(failed)">
+    <classes>
+      <class name="technologyRisk.ToVerifyLeftNavigationBarFunctionality">
+        <methods>
+          <include name="technologyRiskNavBar"/>
+          <include name="initialiseExtendReports"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.ToVerifyLeftNavigationBarFunctionality -->
+    </classes>
+  </test> <!-- To Verify Left Navigation Bar Functionality In Technology Risk(failed) -->
+  <test thread-count="5" name="To Test Search In Self RiskAssessment Question(failed)">
+    <classes>
+      <class name="technologyRisk.ToTestSearchInSelfRiskAssessmentQuestion">
+        <methods>
+          <include name="initialiseExtendReports"/>
+          <include name="generateExtentReports"/>
+          <include name="search"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.ToTestSearchInSelfRiskAssessmentQuestion -->
+    </classes>
+  </test> <!-- To Test Search In Self RiskAssessment Question(failed) -->
+  <test thread-count="5" name="Dropdown Sub Control Name If Technical Radio Button And Audit And Accountability OptionSelected(failed)">
+    <classes>
+      <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndAuditAndAccountabilityOptionSelected">
+        <methods>
+          <include name="dropdownSubControlNameIfTechnicalRadioButtonAndAuditAndAccountabilityOptionSelected"/>
+          <include name="initialiseExtendReports"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndAuditAndAccountabilityOptionSelected -->
+    </classes>
+  </test> <!-- Dropdown Sub Control Name If Technical Radio Button And Audit And Accountability OptionSelected(failed) -->
+  <test thread-count="5" name="Dropdown Threat Source Options In Technology Risk(failed)">
     <classes>
       <class name="technologyRisk.DropdownThreatSource">
         <methods>
-          <include name="threatSourceDropdown"/>
           <include name="initialiseExtendReports"/>
+          <include name="threatSourceDropdownInTechnologyRisk"/>
           <include name="generateExtentReports"/>
           <include name="driver"/>
           <include name="quit"/>
@@ -14,5 +115,33 @@
         </methods>
       </class> <!-- technologyRisk.DropdownThreatSource -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Dropdown Threat Source Options In Technology Risk(failed) -->
+  <test thread-count="5" name="To Approve The Technology Risk(failed)">
+    <classes>
+      <class name="technologyRisk.ToApproveTheRisk">
+        <methods>
+          <include name="toApproveAndEditAndDeleteTechnologyRiskAssessment" invocation-numbers="0 1"/>
+          <include name="initialiseExtendReports"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.ToApproveTheRisk -->
+    </classes>
+  </test> <!-- To Approve The Technology Risk(failed) -->
+  <test thread-count="5" name="To Verify All The Labels In Hardware Asset(failed)">
+    <classes>
+      <class name="technologyRisk.ToVerifyAllTheLabelsInHardwareAssetPage">
+        <methods>
+          <include name="initialiseExtendReports"/>
+          <include name="HostNameLabelInHardwreAsset"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
+          <include name="quit"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- technologyRisk.ToVerifyAllTheLabelsInHardwareAssetPage -->
+    </classes>
+  </test> <!-- To Verify All The Labels In Hardware Asset(failed) -->
+</suite> <!-- Failed suite [Suite] -->

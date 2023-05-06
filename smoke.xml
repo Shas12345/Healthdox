@@ -1,58 +1,258 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Dropdown control Name Options If Management Radio Button Selected">
     <classes>
       <class name="technologyRisk.DropdowncontrolNameIfManagementRadioButtonSelected"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Dropdown Risk Asset Class Options In Technology Risk">
+    <classes>
       <class name="technologyRisk.DropdownRiskAssetClass"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Dropdown Application Criticality Options In Software Asset ">
+    <classes>
       <class name="technologyRisk.DropdownApplicationCriticalityInSoftware"/>
-      <class name="technologyRisk.DropdownRisInput"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Dropdown Risk Input Options In Technology Risk">
+    <classes>
+      <class name="technologyRisk.DropdownRiskInput"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Dropdown Data Classification Options In Software Asset">
+    <classes>
       <class name="technologyRisk.DropdownDataClassificationInSoftware"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Dropdown Department Function Options In Software Asset">
+    <classes>
       <class name="technologyRisk.DropdownDepartmentFunctionInSoftware"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Table Collpase Functionality In Technology Risk">
+    <classes>
       <class name="technologyRisk.TableCollpaseFunctionality"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Operational Radio Button And Maintenance Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndMaintenanceOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Technical Radio Button And Identification And Authentication Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndIdentificationAndAuthenticationOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Technical Radio Button And System And Communications Protection Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndSystemAndCommunicationsProtectionOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Risk Assess Frequency Options In Hardware Asset">
+    <classes>
       <class name="technologyRisk.DropdownRiskAssessFrequencyInHardware"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="To Verify HRM Page Components">
+    <classes>
       <class name="technologyRisk.ToVerifyHRMPageComponents"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Business Function Options In Software Asset">
+    <classes>
       <class name="technologyRisk.DropdownBusinessFunctionInSoftware"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown control Name If Operational Radio Button Selected">
+    <classes>
       <class name="technologyRisk.DropdowncontrolNameIfOperationalRadioButtonSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Probability of Occurance Option In Technology Risk">
+    <classes>
       <class name="technologyRisk.DropdownProbabilityofOccurance"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Operating System Options In Software Asset">
+    <classes>
       <class name="technologyRisk.DropdownOperatingSystemInSoftware"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Risk Response Options In Technology Risk">
+    <classes>
       <class name="technologyRisk.DropdownRiskResponse"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Impact Level Options In Technology Risk">
+    <classes>
       <class name="technologyRisk.DropdownImpactLevel"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Operational Radio Button And Physical And Environmental Protection Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndPhysicalAndEnvironmentalProtectionOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="To Create New Software Asset">
+    <classes>
       <class name="technologyRisk.ToCreateNewSoftwareAsset"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Business Function Options In Hardware Asset">
+    <classes>
       <class name="technologyRisk.DropdownBusinessFunctionInHardware"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Status Options In Technology Risk">
+    <classes>
       <class name="technologyRisk.DropdownStatus"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="To Create A New Technology Risk ">
+    <classes>
       <class name="technologyRisk.ToCreateANewTechnologyRiskAssessment"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Management Radio Button And System And Services Acquisition Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfManagementRadioButtonAndSystemAndServicesAcquisitionOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Management Radio Button And Certification Accreditation And Security Assessments Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Test">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndMediaProtectionOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Management Radio Button And Planning Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfManagementRadioButtonAndPlanningOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="To Verify Left Navigation Bar Functionality In Technology Risk">
+    <classes>
       <class name="technologyRisk.ToVerifyLeftNavigationBarFunctionality"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Operational Radio Button And Contingency Planing Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndContingencyPlaningOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Drop down Sub Control Name If Management Radio Button And Risk Assessment Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfManagementRadioButtonAndRiskAssessmentOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="To Test Search In Self RiskAssessment Question">
+    <classes>
       <class name="technologyRisk.ToTestSearchInSelfRiskAssessmentQuestion"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Risk Assess Frequency Options In Software Asset">
+    <classes>
       <class name="technologyRisk.DropdownRiskAssessFrequencyInSoftware"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Operational Radio Button And Personnel Security Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndPersonnelSecurityOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Technical Radio Button And Access Control Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndAccessControlOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Hardware Criticality Options In Hardware Asset">
+    <classes>
       <class name="technologyRisk.DropdownHardwareCriticalityInHardware"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Operational Radio Button And System And Infoemation Integrity Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndSystemAndInfoemationIntegrityOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="To Create New Hardware Asset">
+    <classes>
       <class name="technologyRisk.ToCreateNewHardwareAsset"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Operational Radio Button And Configuration Management Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndConfigurationManagementOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Risk Impact Category Options In Technology Risk">
+    <classes>
       <class name="technologyRisk.DropdownRiskImpactCategory"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Operational Radio Button And Awareness And Training Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndAwarenessAndTrainingOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Technical Radio Button And Audit And Accountability Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndAuditAndAccountabilityOptionSelected"/>
-      <class name="technologyRisk.DropdownThreatSource"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Risk Asset Class Options In Software Asset">
+    <classes>
       <class name="technologyRisk.DropdownRiskAssetClassInSoftware"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Responsible Dept Options In Technology Risk">
+    <classes>
       <class name="technologyRisk.DropdownResponsibleDept"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown SubControl Name If Operational Radio Button And Incident Response Option Selected">
+    <classes>
       <class name="technologyRisk.DropdownSubControlNameIfOperationalRadioButtonAndIncidentResponseOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Sub Control Name If Technical Radio Button And Audit And Accountability OptionSelected">
+    <classes>
+      <class name="technologyRisk.DropdownSubControlNameIfTechnicalRadioButtonAndAuditAndAccountabilityOptionSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Threat Source Options In Technology Risk">
+    <classes>
+      <class name="technologyRisk.DropdownThreatSource"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="To Approve The Technology Risk">
+    <classes>
       <class name="technologyRisk.ToApproveTheRisk"/>
-      <class name="technologyRisk.ToUpdateSelfRiskAssessmentQuestion"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="To Verify All The Labels In Hardware Asset">
+    <classes>
       <class name="technologyRisk.ToVerifyAllTheLabelsInHardwareAssetPage"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Risk Asset Class Options In Hardware Asset">
+    <classes>
       <class name="technologyRisk.DropdownRiskAssetClassInHardware"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown control Name If Technical Radio Button Selected">
+    <classes>
       <class name="technologyRisk.DropdowncontrolNameIfTechnicalRadioButtonSelected"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Dropdown Department Function Options In Hardware Asset">
+    <classes>
       <class name="technologyRisk.DropdownDepartmentFunctionInHardware"/>
     </classes>
   </test> <!-- Test -->

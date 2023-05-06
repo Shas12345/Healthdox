@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import Generic_Liberary.BaseClass;
 
 public class DropdownStatus extends BaseClass {
-	@Test
+	@Test(testName = "DropdownStatus")
 	public void statusDropdownInTechnologyRisk() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
@@ -25,8 +25,7 @@ public class DropdownStatus extends BaseClass {
 		js.executeScript("arguments[0].scrollIntoView(true)", basePg.getStatusLabel());
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("Status_chosen")));
 		basePg.getStatusDropdown().click();
-		data.checkDropDownListfromUIAndExcel(driver, "Status","Technology");
+		data.checkDropDownListfromUIAndExcel(driver, "Status", "Technology");
 		extentTest.pass("The Dropdown options are matching");
 	}
-
 }

@@ -8,8 +8,9 @@ import org.testng.annotations.Test;
 import Generic_Liberary.BaseClass;
 
 public class DropdownRiskResponse extends BaseClass {
-	@Test
+	@Test(testName = "DropdownRiskResponse")
 	public void riskResponseDropdownInTechnologyRisk() {
+		explicit.until(ExpectedConditions.elementToBeClickable(hrmPg.getTechnologyRiskAssessmentText()));
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);
 		extentTest.info("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page");

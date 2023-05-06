@@ -67,7 +67,6 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
-						<suiteXmlFile>smoke.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

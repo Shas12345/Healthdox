@@ -44,6 +44,7 @@ public class ToVerifyDataInRespectiveStatusPage extends BaseClass {
 		// Capturing the Risk Id from the TextBox
 		String riskId = basePg.getRiskIdTextBox().getAttribute("value");
 		Reporter.log("The Risk ID captured is " + riskId, true);
+		extentTest.info("The Risk ID captured is " + riskId);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, adminPg.getRiskAgentDropdown(), info[0]);
 		// Entering the Data into DepartmentName
@@ -164,6 +165,7 @@ public class ToVerifyDataInRespectiveStatusPage extends BaseClass {
 			softassert.assertEquals(driver.findElement(By.id("closeBtn")).isDisplayed(), true,
 					"Ok Button is not provided in OpenPage");
 			driver.findElement(By.id("closeBtn")).click();
+			extentTest.pass("Successfully verified created risk in Open status ");
 
 		} else if (info[21].equalsIgnoreCase("In-Progress")) {
 			js.executeScript("arguments[0].scrollIntoView(true)", basePg.getKriDashboardLeftNavBar());
@@ -182,7 +184,7 @@ public class ToVerifyDataInRespectiveStatusPage extends BaseClass {
 			}
 			String[] inprogressValue = driver.findElement(By.xpath("//span[contains(text(),'" + riskId + "')]/../.."))
 					.getText().split(" ");
-			Reporter.log("Verified data in open risk is :", true);
+			Reporter.log("Verified data in In progress risk is :", true);
 			for (int i = 0; i < inprogressValue.length; i++) {
 				Reporter.log(inprogressValue[i], true);
 			}
@@ -192,6 +194,7 @@ public class ToVerifyDataInRespectiveStatusPage extends BaseClass {
 			softassert.assertEquals(driver.findElement(By.id("closeBtn")).isDisplayed(), true,
 					"Ok Button is not provided in InprogressPage");
 			driver.findElement(By.id("closeBtn")).click();
+			extentTest.pass("Successfully verified created risk in In-progress status ");
 
 		} else if (info[21].equalsIgnoreCase("Closed")) {
 			js.executeScript("arguments[0].scrollIntoView(true)", basePg.getKriDashboardLeftNavBar());
@@ -218,9 +221,11 @@ public class ToVerifyDataInRespectiveStatusPage extends BaseClass {
 			softassert.assertEquals(driver.findElement(By.id("closeBtn")).isDisplayed(), true,
 					"Ok Button is not provided in ClosedPage");
 			driver.findElement(By.id("closeBtn")).click();
+			extentTest.pass("Successfully verified created risk in Closed status ");
 
 		} else
 			Reporter.log("The Status value is invalid", true);
+	//	extentTest.fail("Invalid Status selected");
 		for (int i = 0; i <= 5; i++) {
 			driver.navigate().back();
 		}

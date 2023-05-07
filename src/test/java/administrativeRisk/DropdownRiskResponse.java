@@ -10,12 +10,14 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownRiskResponse extends BaseClass {
 	@Test
-	public void riskResponseDropdown() {
+	public void riskResponseDropdownInAdministrative() {
 		hrmPg.getAdministrativeRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Administrative Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Administrative Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Risk Assessment section and performing clicking action
 		basePg.getRiskAssessmentLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in Administrative risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in Administrative risks page");
 		// Verifying New Risk section and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getNewRisk()));
 		softassert.assertEquals(basePg.getNewRisk().isDisplayed(), true,

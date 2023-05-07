@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import Generic_Liberary.BaseClass;
 
 public class DropdownStatus extends BaseClass {
-	@Test(testName = "DropdownStatus")
+	@Test(testName = "DropdownStatus",groups = {"Smoke"})
 	public void statusDropdownInTechnologyRisk() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);

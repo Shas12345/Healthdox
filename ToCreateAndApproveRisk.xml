@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Create And Approve Risk In Technology Risk Assessment">
+	<test thread-count="5" name="To Approve The Technology Risk">
+		<classes>
+			<class name="technologyRisk.ToApproveTheRisk" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="To Create New Hardware Asset">
+		<classes>
+			<class name="technologyRisk.ToCreateNewHardwareAsset" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="To Create A New Technology Risk ">
+		<classes>
+			<class name="technologyRisk.ToCreateANewTechnologyRiskAssessment" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="To Create New Software Asset">
+		<classes>
+			<class name="technologyRisk.ToCreateNewSoftwareAsset" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

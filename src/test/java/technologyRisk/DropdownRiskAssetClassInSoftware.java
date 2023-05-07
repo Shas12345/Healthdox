@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import Generic_Liberary.BaseClass;
 
 public class DropdownRiskAssetClassInSoftware extends BaseClass{
-	@Test
+	@Test(groups = {"Smoke"})
 	public void riskAssetClassDropdownInSoftwareAsset() {
 		hrmPg.getTechnologyRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Technology Risk Assessment text on Hipaa Risk Management Page", true);

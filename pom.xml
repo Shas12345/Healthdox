@@ -66,8 +66,8 @@
 				<version>3.0.0-M5</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-						<suiteXmlFile>smoke.xml</suiteXmlFile>
+						<suiteXmlFile>demo.xml</suiteXmlFile>
+						<suiteXmlFile>demo2.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

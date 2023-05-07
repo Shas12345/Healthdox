@@ -36,6 +36,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.testng.internal.annotations.ITest;
 
@@ -121,9 +122,11 @@ public class BaseClass {
 
 		// maximizing the browser window and adding waiting conditions
 		driver.manage().window().maximize();
+
 		Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
 		String device = cap.getBrowserName() + " " + cap.getVersion().subSequence(0, cap.getVersion().indexOf("."));
 		String author = "Shahank";
+
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		explicit = new WebDriverWait(driver, 15);
 
@@ -215,14 +218,23 @@ public class BaseClass {
 	}
 
 	@BeforeSuite
-	public void initialiseExtendReports() {
+	public void initialiseExtendReports() throws IOException {
 
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter("Result.html");
 		// creating object for extent report
 		extentReports = new ExtentReports();
-		extentReports.attachReporter(sparkReporter);
-
+		sparkReporter.config().setReportName("HIPAA Test Results");
+		sparkReporter.config().setDocumentTitle("Healthdox Automation Testing");
+		sparkReporter.config().setCss(".header{background-color:#11bcc5}");
+		sparkReporter.config().setCss(".badge-primary{background-color:#c50f7c}");
 		extentReports.setSystemInfo("OS", System.getProperty("os.name"));
+		sparkReporter.config().setJs("document.getElementsByClassName('logo')[0].style.display='none';");
+	//	sparkReporter.loadXMLConfig(new File("config.xml"));
+		extentReports.attachReporter(sparkReporter);
+		extentReports.setSystemInfo("Java Version", System.getProperty("java.version"));
+		extentReports.setSystemInfo("App URL", data.fromPropertyFile("url"));
+		extentReports.setSystemInfo("User Name", data.fromPropertyFile("username"));
+		extentReports.setSystemInfo("Password", data.fromPropertyFile("password"));
 	}
 
 	@AfterSuite
@@ -235,7 +247,7 @@ public class BaseClass {
 	public void quit(Method m, ITestResult result) {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
-			String screenShotPath =null;
+			String screenShotPath = null;
 			screenShotPath = captureScreenShot(
 					result.getTestContext().getName() + "_" + result.getMethod().getMethodName() + ".png");
 			extentTest.addScreenCaptureFromPath(screenShotPath);
@@ -244,6 +256,7 @@ public class BaseClass {
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			extentTest.pass(m.getName() + " is passed");
 		}
+		extentTest.assignCategory(m.getAnnotation(Test.class).groups());
 	}
 
 	@AfterTest

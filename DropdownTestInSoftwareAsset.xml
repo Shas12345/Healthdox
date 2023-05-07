@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Dropdown Option In Software Asset" parallel="tests" thread-count="2">
+	<test thread-count="5" name="Dropdown Data Classification Options In Software Asset">
+		<classes>
+			<class name="technologyRisk.DropdownDataClassificationInSoftware" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Dropdown Department Function Options In Software Asset">
+		<classes>
+			<class name="technologyRisk.DropdownDepartmentFunctionInSoftware" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Dropdown Business Function Options In Software Asset">
+		<classes>
+			<class name="technologyRisk.DropdownBusinessFunctionInSoftware" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Dropdown Operating System Options In Software Asset">
+		<classes>
+			<class name="technologyRisk.DropdownOperatingSystemInSoftware" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Dropdown Risk Assess Frequency Options In Software Asset">
+		<classes>
+			<class name="technologyRisk.DropdownRiskAssessFrequencyInSoftware" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Dropdown Risk Asset Class Options In Software Asset">
+		<classes>
+			<class name="technologyRisk.DropdownRiskAssetClassInSoftware" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Dropdown Application Criticality Options In Software Asset ">
+		<classes>
+			<class name="technologyRisk.DropdownApplicationCriticalityInSoftware" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

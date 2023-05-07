@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="technologyRisk.DropdownRiskAssetClassInSoftware">
+      <class name="technologyRisk.ToApproveTheRisk">
         <methods>
-          <include name="riskAssetClassDropdownInSoftwareAsset"/>
+          <include name="toApproveAndEditAndDeleteTechnologyRiskAssessment" invocation-numbers="0 1"/>
           <include name="initialiseExtendReports"/>
           <include name="generateExtentReports"/>
           <include name="driver"/>
           <include name="quit"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- technologyRisk.DropdownRiskAssetClassInSoftware -->
+      </class> <!-- technologyRisk.ToApproveTheRisk -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

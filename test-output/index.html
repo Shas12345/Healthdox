@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-skipped">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\USER\AppData\Local\Temp\testng-eclipse-1129820285\testng-customsuite.xml</span>
+                    <span>C:\Users\USER\AppData\Local\Temp\testng-eclipse--1139598856\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="technologyRisk.DropdownRiskAssetClassInSoftware" hash-for-method="riskAssetClassDropdownInSoftwareAsset">riskAssetClassDropdownInSoftwareAsset</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="technologyRisk.ToApproveTheRisk" hash-for-method="toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)">toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Default_suite -->
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="technologyRisk.ToApproveTheRisk" hash-for-method="toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)">toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,102 +124,53 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-skipped">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">technologyRisk.DropdownRiskAssetClassInSoftware</span>
+              <img src="failed.png"/>
+              <span class="class-name">technologyRisk.ToApproveTheRisk</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="riskAssetClassDropdownInSoftwareAsset">
-                  </a> <!-- riskAssetClassDropdownInSoftwareAsset -->
-                  <span class="method-name">riskAssetClassDropdownInSoftwareAsset</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: received Inspector.detached event
-  (failed to check if window was closed: disconnected: not connected to DevTools)
+                  <a name="toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)">
+                  </a> <!-- toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...) -->
+                  <span class="method-name">toApproveAndEditAndDeleteTechnologyRiskAssessment</span>
+                  <span class="parameters">([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentiality, Low, Low, 1, Identification and Authentication, IDENTIFICATION AND AUTHENTICATION POLICY AND PROCEDURES, Testing, Testing, 12/02/2023, Emergency, Mitigate, In-Progress, 11/22/2023, Open])</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;green&quot; href=&quot;#&quot; onclick=&quot;approveRiskAssessment(&apos;83dc506c-20d8-48e7-af9b-9ee97e3a99eb&apos;,&apos;RSKT904&apos;,&apos;Technology&apos;)&quot;&gt;...&lt;/a&gt; is not clickable at point (1342, 586). Other element would receive the click: &lt;a href=&quot;#&quot; id=&quot;btn-scroll-up&quot; class=&quot;btn-scroll-up btn btn-sm btn-inverse display&quot;&gt;...&lt;/a&gt;
   (Session info: chrome=112.0.5615.138)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-4SLAKQP&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	GetHandleVerifier [0x011CDCE3+50899]
-	(No symbol) [0x0115E111]
-	(No symbol) [0x01065588]
-	(No symbol) [0x01059257]
-	(No symbol) [0x01058DEB]
-	(No symbol) [0x01058275]
-	(No symbol) [0x0105820C]
-	(No symbol) [0x01056F06]
-	(No symbol) [0x01057668]
-	(No symbol) [0x01056685]
-	(No symbol) [0x0105C8FE]
-	(No symbol) [0x010564C5]
-	(No symbol) [0x01057F2A]
-	(No symbol) [0x01056F06]
-	(No symbol) [0x01057668]
-	(No symbol) [0x01056685]
-	(No symbol) [0x01050E2F]
-	(No symbol) [0x010564C5]
-	(No symbol) [0x01055E7D]
-	(No symbol) [0x01055B5C]
-	(No symbol) [0x01066923]
-	(No symbol) [0x0104CAE3]
-	(No symbol) [0x0104C1D5]
-	(No symbol) [0x010B21CD]
-	(No symbol) [0x010B1CEC]
-	(No symbol) [0x010AB6F6]
-	(No symbol) [0x01087708]
-	(No symbol) [0x0108886D]
-	GetHandleVerifier [0x01433EAE+2566302]
-	GetHandleVerifier [0x014692B1+2784417]
-	GetHandleVerifier [0x0146327C+2759788]
-	GetHandleVerifier [0x01265740+672048]
-	(No symbol) [0x01168872]
-	(No symbol) [0x011641C8]
-	(No symbol) [0x011642AB]
-	(No symbol) [0x011571B7]
-	BaseThreadInitThunk [0x76876359+25]
-	RtlGetAppContainerNamedObjectPath [0x77B27A94+228]
-	RtlGetAppContainerNamedObjectPath [0x77B27A64+180]
-
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\USER\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64398}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0cc4f791698faae8a62224c16980c03b
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at Generic_Liberary.BaseClass.driver(BaseClass.java:94)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at technologyRisk.ToApproveTheRisk.toApproveAndEditAndDeleteTechnologyRiskAssessment(ToApproveTheRisk.java:149)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
@@ -232,12 +188,88 @@ remote stacktrace: Backtrace:
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)">
+                  </a> <!-- toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...) -->
+                  <span class="method-name">toApproveAndEditAndDeleteTechnologyRiskAssessment</span>
+                  <span class="parameters">([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentiality, High, Low, 2, Risk Assessment, RISK ASSESSMENT, Testing, Testing, 12/02/2023, Emergency, Mitigate, In-Progress, 11/22/2023, Open])</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //i[text()=&apos;Technology Risks Assessment&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at technologyRisk.ToApproveTheRisk.toApproveAndEditAndDeleteTechnologyRiskAssessment(ToApproveTheRisk.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//i[text()=&apos;Technology Risks Assessment&apos;]&quot;}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-4SLAKQP&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\USER\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64398}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0cc4f791698faae8a62224c16980c03b
+*** Element info: {Using=xpath, value=//i[text()=&apos;Technology Risks Assessment&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-skipped -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\USER\AppData\Local\Temp\testng-eclipse-1129820285\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\USER\AppData\Local\Temp\testng-eclipse--1139598856\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -246,11 +278,7 @@ remote stacktrace: Backtrace:
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;technologyRisk.DropdownRiskAssetClassInSoftware&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;riskAssetClassDropdownInSoftwareAsset&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- technologyRisk.DropdownRiskAssetClassInSoftware --&gt;
+      &lt;class name=&quot;technologyRisk.ToApproveTheRisk&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -290,16 +318,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'riskAssetClassDropdownInSoftwareAsset')
-data.setCell(0, 2, 'technologyRisk.DropdownRiskAssetClassInSoftware')
-data.setCell(0, 3, 0);
+data.setCell(0, 1, 'toApproveAndEditAndDeleteTechnologyRiskAssessment')
+data.setCell(0, 2, 'technologyRisk.ToApproveTheRisk')
+data.setCell(0, 3, 41963);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'toApproveAndEditAndDeleteTechnologyRiskAssessment')
+data.setCell(1, 2, 'technologyRisk.ToApproveTheRisk')
+data.setCell(1, 3, 21254);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -310,6 +342,21 @@ return data;
             <span class="header-content">Reporter output for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">The Risk ID captured is RSKT904</span>
+                <span class="reporter-method-output">The captured description :The organization:
+a. Develops, documents, and disseminates to [Assignment: organization-defined personnel or roles]:
+1. An identification and authentication policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
+2. Procedures to facilitate the implementation of the identification and authentication policy and associated identification and authentication controls; and
+b. Reviews and updates the current:
+1. Identification and authentication policy [Assignment: organization-defined frequency]; and
+2. Identificatio</span>
+                <span class="reporter-method-output">The Target Quarter is :</span>
+                <span class="reporter-method-output">Would you like to Save this risk and Forward for approval?</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
@@ -325,32 +372,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">technologyRisk.DropdownRiskAssetClassInSoftware</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">technologyRisk.ToApproveTheRisk</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">initialiseExtendReports</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">driver(org.testng.TestRunner@630d1b2f, chrome)</span>
-                <span class="method-start">2335 ms</span>
+                <span class="method-name">driver(org.testng.TestRunner@30b975ad, chrome)</span>
+                <span class="method-start">1244 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">riskAssetClassDropdownInSoftwareAsset</span>
-                <span class="method-start">19258 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)</span>
+                <span class="method-start">39393 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">quit</span>
-                <span class="method-start">19288 ms</span>
+                <span class="method-name">quit(public void technologyRisk.ToApproveTheRisk.toApproveAndEditAndDeleteTechnologyRiskAssessment(java.l...)</span>
+                <span class="method-start">81394 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">toApproveAndEditAndDeleteTechnologyRiskAssessment([Laptop, Accounts, ToTest, Shashank, 10/02/2023, Audit, Human, Totest, Testing, Testing, Confidentia...)</span>
+                <span class="method-start">81740 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">quit(public void technologyRisk.ToApproveTheRisk.toApproveAndEditAndDeleteTechnologyRiskAssessment(java.l...)</span>
+                <span class="method-start">103003 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">quit</span>
-                <span class="method-start">19313 ms</span>
+                <span class="method-start">103332 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateExtentReports</span>
-                <span class="method-start">19536 ms</span>
+                <span class="method-start">104965 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

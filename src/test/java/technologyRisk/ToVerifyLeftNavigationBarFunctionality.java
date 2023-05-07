@@ -8,11 +8,12 @@ import Generic_Liberary.BaseClass;
 public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 
 	@Test
-	public void technologyRiskNavBar() {
+	public void toVerifyLeftNavigationBarFunctionality() {
 		hrmPg.getTraImage().click();
 		softassert.assertEquals(basePg.getKriDashboardLeftNavBar().isDisplayed(), true,
 				"KRI Dashboard section is not provided in left navigation bar for Technology Risk Assessment");
 		Reporter.log("Verifyed KRI Dashboard section in left navigation bar for Technology Risk Assessment", true);
+		extentTest.info("Verifyed KRI Dashboard section in left navigation bar for Technology Risk Assessment");
 
 		softassert.assertEquals(basePg.getRiskAssessmentLeftNavBar().isDisplayed(), true,
 				"Risk Assessment is not provided in left navigation bar for Technology Risk Assessment");
@@ -27,6 +28,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking New risk in left navigation bar navigated to New Technology Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking New risk in left navigation bar navigated to New Technology Risk Assessment Page");
 		basePg.getRiskAssessmentLeftNavBar().click();
 		// Verifying and clicking on Edit Risk
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getEditRisk()));
@@ -37,6 +40,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking Edit risk in left navigation bar navigated to Edit Technology Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking Edit risk in left navigation bar navigated to Edit Technology Risk Assessment Page");
 		basePg.getRiskAssessmentLeftNavBar().click();
 		// Verifying and clicking on View Risk
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRisk()));
@@ -52,6 +57,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking All risk in left navigation bar navigated to All Technology Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking All risk in left navigation bar navigated to All Technology Risk Assessment Page");
 		// Verifying and clicking on open Risk under View Risk
 		basePg.getRiskAssessmentLeftNavBar().click();
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRiskArrow()));
@@ -64,6 +71,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking Open risk in left navigation bar navigated to All Technology Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking Open risk in left navigation bar navigated to All Technology Risk Assessment Page");
 		// Verifying and clicking on In progress Risk under View Risk
 		basePg.getRiskAssessmentLeftNavBar().click();
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRiskArrow()));
@@ -76,6 +85,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking In Progress risk in left navigation bar navigated to All Technology Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking In Progress risk in left navigation bar navigated to All Technology Risk Assessment Page");
 		// Verifying and clicking on Closed Risk under View Risk
 		basePg.getRiskAssessmentLeftNavBar().click();
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRiskArrow()));
@@ -88,6 +99,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking Closed risk in left navigation bar navigated to All Technology Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking Closed risk in left navigation bar navigated to All Technology Risk Assessment Page");
 		// Verifying and clicking on Software Assert under Asset Inventory
 		softassert.assertEquals(basePg.getAssetInventorytLeftNavBar().isDisplayed(), true,
 				"Assest Inventory section is not provided in left navigation bar for Technology Risk Assessment");
@@ -100,6 +113,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking Software Asset in left navigation bar navigated to Software Asset Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking Software Asset in left navigation bar navigated to Software Asset Page");
 		// Verifying and clicking on Hardware Asset under Asset Inventory
 		basePg.getAssetInventorytLeftNavBar().click();
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getHardwareAsset()));
@@ -108,6 +123,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking Hardware Asset in left navigation bar navigated to Software Asset Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking Hardware Asset in left navigation bar navigated to Software Asset Page");
 		// Verifying and clicking on Reports
 		softassert.assertEquals(basePg.getReports().isDisplayed(), true,
 				"Reports section is not provided in left navigation bar for Technology Risk Assessment");
@@ -117,6 +134,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Risk Excel Reports option is not provided under Reports section in left navigation bar for Technology Risk Assessment");
 		basePg.getRiskExcelReports().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.fail("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on Risk PDF Reports option under Reports
 		basePg.getReports().click();
@@ -124,6 +142,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Risk PDF Reports option is not provided under Reports section in left navigation bar for Technology Risk Assessment");
 		basePg.getRiskPdfReports().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.fail("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on Self Risk Assessment Reports option under Reports
 		basePg.getReports().click();
@@ -131,6 +150,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Risk PDF Reports option is not provided under Reports section in left navigation bar for Technology Risk Assessment");
 		basePg.getRiskPdfReports().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.fail("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on KRI PDF option under Reports
 		basePg.getReports().click();
@@ -138,6 +158,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"KRI PDF Reports option is not provided under Reports section in left navigation bar for Technology Risk Assessment");
 		basePg.getKrisInPdf().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.fail("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on Software Asset Report option under Reports
 		basePg.getReports().click();
@@ -145,6 +166,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Software Asset Reports option is not provided under Reports section in left navigation bar for Technology Risk Assessment");
 		basePg.getSoftwareAssetReports().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.fail("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on Hardware Asset Report option under Reports
 		basePg.getReports().click();
@@ -152,6 +174,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Hardware Asset Reports option is not provided under Reports section in left navigation bar for Technology Risk Assessment");
 		basePg.getHardwareAssetReports().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.fail("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on System Configuration section in left navigation
 		// bar.
@@ -165,12 +188,14 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Update Self Risk Assessment Questions option is not provided under System Configuration section in left navigation bar for Technology Risk Assessment");
 		basePg.getUpdateSelfRiskAssessmentQuestions().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.fail("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Checking collapse functionality
 		softassert.assertEquals(basePg.getCollapseIcon().isDisplayed(), true,
 				"Collapse icon is not provided under System Configuration section in left navigation bar for Technology Risk Assessment");
 		basePg.getCollapseIcon().click();
 		Reporter.log("Successfully clicked on collapse icon", true);
+		extentTest.info("Successfully clicked on collapse icon");
 
 	}
 

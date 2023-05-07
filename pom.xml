@@ -66,8 +66,7 @@
 				<version>3.0.0-M5</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>demo.xml</suiteXmlFile>
-						<suiteXmlFile>demo2.xml</suiteXmlFile>
+						<suiteXmlFile>TestTechnologyRiskAssessment.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

@@ -230,7 +230,12 @@ public class ToApproveTheRisk extends BaseClass {
 
 		}
 		Thread.sleep(2000);
+		try {
 		driver.findElement(By.id("saveARiskAssessBtn")).click();
+		}catch (Exception e) {
+			driver.findElement(By.id("saveARiskAssessBtn")).click();
+			
+		}
 		Reporter.log(driver.findElement(By.xpath("//div[contains(@id,'ui-id-')]")).getText(), true);
 		softassert.assertEquals("Failed to edit the Risk assessment details",
 				"Successfully edited the Risk assessment details", "Not able to edit the risk");

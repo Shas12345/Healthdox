@@ -8,7 +8,7 @@ import Generic_Liberary.BaseClass;
 
 public class ToVerifyAllTheLabelsInHardwareAssetPage extends BaseClass {
 	@Test(priority = 1)
-	public void assetIdInHardwareAsser() {
+	public void assetIdLabelInHardwareAsset() {
 		// Navigating to Hardware Asset Pop up in Hardware Asset Page.
 		hrmPg.getTraImage().click();
 		basePg.getAssetInventoryArrow().click();
@@ -42,8 +42,8 @@ public class ToVerifyAllTheLabelsInHardwareAssetPage extends BaseClass {
 	@Test(priority = 3)
 	public void HostNameLabelInHardwreAsset() {
 		// Verifying Host Name Label in Hardware Inventory Details.
-		explicit.until(ExpectedConditions.visibilityOf(softwarePg.getNameOfApplicationLabel()));
-		softassert.assertEquals(softwarePg.getNameOfApplicationLabel().isDisplayed(), true,
+		explicit.until(ExpectedConditions.visibilityOf(hardwarepg.getHostLabel()));
+		softassert.assertEquals(hardwarepg.getHostLabel().isDisplayed(), true,
 				"Host Name label is not provided under Hardware Inventory Details in Hardware Asset Page");
 		Reporter.log("Successfully verified Host Name label under Hardware Inventory Details in Hardware Asset Page",
 				true);

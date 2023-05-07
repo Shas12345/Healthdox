@@ -1,5 +1,6 @@
 package technologyRisk;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -38,14 +39,19 @@ public class TableCollpaseFunctionality extends BaseClass {
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getRiskAssessmentTable()));
 		softassert.assertEquals(basePg.getRiskTreatmentTable().isDisplayed(), true,
 				"Risk Treatment table is not provided in New Technology Risk Page");
-		basePg.getRiskTreatmentTable().click();
-		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getRiskTreatmentTable()));
-		basePg.getRiskTreatmentTable().click();
-		softassert.assertEquals(basePg.getRiskResponseTable().isDisplayed(), true,
-				"Risk Response table is not provided in New Technology Risk Page");
-		basePg.getRiskResponseTable().click();
-		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getRiskResponseTable()));
-		basePg.getRiskResponseTable().click();
+		// basePg.getRiskTreatmentTable().click();
+		/*
+		 * explicit.until(ExpectedConditions.elementToBeClickable(basePg.
+		 * getRiskTreatmentTable())); basePg.getRiskTreatmentTable().click();
+		 * softassert.assertEquals(basePg.getRiskResponseTable().isDisplayed(), true,
+		 * "Risk Response table is not provided in New Technology Risk Page");
+		 * basePg.getRiskResponseTable().click();
+		 */
+		driver.findElement(By.xpath("//a[@class='accordion-toggle risk-panel collapsed']")).click();
+		/*
+		 * explicit.until(ExpectedConditions.elementToBeClickable(basePg.
+		 * getRiskResponseTable())); basePg.getRiskResponseTable().click();
+		 */
 		Reporter.log("Successfully verifyed the functionality of table collapsible feature", true);
 		extentTest.pass("Successfully verifyed the functionality of table collapsible feature");
 

@@ -8,7 +8,7 @@ import Generic_Liberary.BaseClass;
 
 public class ToVerifyHRMPageComponents extends BaseClass {
 	@Test(priority = 1)
-	public void technologyRiskAssessment() {
+	public void toVerifyHRMPageComponents() {
 		String expectedTitle = data.fromPropertyFile("HRMSTitle");
 		String actualTitle = driver.getTitle();
 		softassert.assertEquals(actualTitle, expectedTitle, "HRM Page title is not matching with the expected title");

@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="technologyRisk.ToApproveTheRisk">
+      <class name="physicalRisk.ToCreateANewPhysicalRiskAssessment">
         <methods>
-          <include name="toApproveAndEditAndDeleteTechnologyRiskAssessment" invocation-numbers="0 1"/>
+          <include name="checkResult"/>
           <include name="initialiseExtendReports"/>
           <include name="generateExtentReports"/>
+          <include name="newPhysicalRiskAssessment"/>
           <include name="driver"/>
           <include name="quit"/>
-          <include name="quit"/>
         </methods>
-      </class> <!-- technologyRisk.ToApproveTheRisk -->
+      </class> <!-- physicalRisk.ToCreateANewPhysicalRiskAssessment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

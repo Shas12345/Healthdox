@@ -9,13 +9,14 @@ import Generic_Liberary.BaseClass;
 
 public class DropdowncontrolNameIfOperationalRadioButtonSelected  extends BaseClass{
 	@Test
-	public void controlNameDropdown() throws InterruptedException {
+	public void dropdowncontrolNameIfOperationalRadioButtonSelectedInPhysicalRisk() throws InterruptedException {
 		hrmPg.getPhysicalRiskAssessmentText().click();
-		
 		Reporter.log("Successfully clicked on Physical Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Physical Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Risk Assessment section and performing clicking action
 		basePg.getRiskAssessmentLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in Physical risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in Physical risks page");
 		// Verifying New Risk section and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getNewRisk()));
 		softassert.assertEquals(basePg.getNewRisk().isDisplayed(), true,
@@ -31,6 +32,7 @@ public class DropdowncontrolNameIfOperationalRadioButtonSelected  extends BaseCl
 		js.executeScript("arguments[0].scrollIntoView(false)", basePg.getResponsibleLabel());
 		basePg.getControlNameDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Operational Control Name","Physical");
+		extentTest.pass("Options are matching");
 	}
 
 }

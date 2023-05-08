@@ -14,7 +14,7 @@ import Generic_Liberary.ReadData;
 public class ToTestSearchInSelfRiskAssessmentQuestion extends BaseClass {
 
 	@Test
-	public void search() throws InterruptedException {
+	public void toTestSearchFunctionalityInSelfRiskAssessmentQuestion() throws InterruptedException {
 		hrmPg.getPhysicalRiskAssessmentText().click();
 		basePg.getSystemConfiguration().click();
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getUpdateSelfRiskAssessmentQuestions()));
@@ -33,8 +33,9 @@ public class ToTestSearchInSelfRiskAssessmentQuestion extends BaseClass {
 				selfRiskQuestionPg.getSearchTextBox()
 						.sendKeys(((ReadData) data).fromExcel("SelfAssessmentQuestrion", 1, 2));
 				Reporter.log(data.getText(), true);
+				extentTest.info(data.getText());
+				
 			}
-			Reporter.log(data.getText(), true);
 		}
 
 	}

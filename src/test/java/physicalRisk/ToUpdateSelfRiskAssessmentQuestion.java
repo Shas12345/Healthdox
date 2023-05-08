@@ -5,13 +5,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import Generic_Liberary.BaseClass;
 
 public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 	public String questionData = data.fromExcel("SelfAssessmentQuestrion", 1, 0);
 
 	@Test
-	public void addNewSelfRiskAssessment() {
+	public void addNewSelfRiskAssessmentQuestionInPhysicalRisk() {
 		hrmPg.getPhysicalRiskAssessmentText().click();
 		// Clicking on System Configuration
 		basePg.getSystemConfiguration().click();
@@ -26,12 +27,14 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 		softassert.assertEquals(selfRiskQuestionPg.getQuestionLabel().isDisplayed(), true,
 				"Question Label is not provided in self assessment page");
 		Reporter.log("Verified Question Label in Self Assessment page", true);
+		extentTest.info("Verified Question Label in Self Assessment page");
 		selfRiskQuestionPg.getQuestionTextBox().sendKeys(questionData);
 
 		// Verifying and Clicking on save Button
 		softassert.assertEquals(selfRiskQuestionPg.getSaveButton().isDisplayed(), true,
 				"Save Button is not provided in self assessment page");
 		Reporter.log("Verified Save Button in Self Assessment page", true);
+		extentTest.info("Verified Save Button in Self Assessment page");
 		selfRiskQuestionPg.getSaveButton().click();
 
 		for (;;) {

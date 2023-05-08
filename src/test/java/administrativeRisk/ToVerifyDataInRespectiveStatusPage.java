@@ -223,9 +223,10 @@ public class ToVerifyDataInRespectiveStatusPage extends BaseClass {
 			driver.findElement(By.id("closeBtn")).click();
 			extentTest.pass("Successfully verified created risk in Closed status ");
 
-		} else
+		} else {
 			Reporter.log("The Status value is invalid", true);
-	//	extentTest.fail("Invalid Status selected");
+			extentTest.fail("Invalid Status selected");
+		}
 		for (int i = 0; i <= 5; i++) {
 			driver.navigate().back();
 		}

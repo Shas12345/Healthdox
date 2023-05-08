@@ -2,7 +2,6 @@ package physicalRisk;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -10,12 +9,15 @@ import Generic_Liberary.BaseClass;
 
 public class DropdownImpactLevel extends BaseClass {
 	@Test
-	public void impactLevelDropdown() {
+	public void impactLevelDropdownInPhysicalRisk() {
+		//To test impact level
 		hrmPg.getPhysicalRiskAssessmentText().click();
 		Reporter.log("Successfully clicked on Physical Risk Assessment text on Hipaa Risk Management Page", true);
+		extentTest.info("Successfully clicked on Physical Risk Assessment text on Hipaa Risk Management Page");
 		// Verifying Risk Assessment section and performing clicking action
 		basePg.getRiskAssessmentLeftNavBar().click();
-		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in physical risks page", true);
+		Reporter.log("Successfully clicked on Risk Assessment on left navigation bar in Physical risks page", true);
+		extentTest.info("Successfully clicked on Risk Assessment on left navigation bar in Physical risks page");
 		// Verifying New Risk section and performing clicking action
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getNewRisk()));
 		softassert.assertEquals(basePg.getNewRisk().isDisplayed(), true,
@@ -25,6 +27,7 @@ public class DropdownImpactLevel extends BaseClass {
 		explicit.until(ExpectedConditions.presenceOfElementLocated(By.id("ImpactLevel_chosen")));
 		basePg.getImpactLevelDropdown().click();
 		data.checkDropDownListfromUIAndExcel(driver, "Impact Level","Physical");
+		extentTest.pass("Options are matching");
 	}
 
 }

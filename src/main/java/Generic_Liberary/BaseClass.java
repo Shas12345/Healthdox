@@ -27,6 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestClass;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -93,18 +94,22 @@ public class BaseClass {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			extentTest.info("Chrome Browser launched successfully");
+			Reporter.log("Chrome Browser launched successfully",true);
 
 		} else if (bname.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			extentTest.info("Firefox Browser launched successfully");
+			Reporter.log("Firefox Browser launched successfully",true);
 		} else if (bname.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			extentTest.info("Edge Browser launched successfully");
+			Reporter.log("Edge Browser launched successfully",true);
 		} else {
 			System.out.println("Invalid browser name");
 			extentTest.info("Invaid Browser");
+			Reporter.log("Invaid Browser",true);
 		}
 		// Creating object for Pom Classes
 		basePg = new BasePage(driver);
@@ -144,6 +149,7 @@ public class BaseClass {
 		String url = data.fromPropertyFile("url");
 		driver.get(url);
 		extentTest.info("Successfully navigated to the url");
+		Reporter.log("Successfully navigated to the url",true);
 		driver.findElement(By.id("details-button")).click();
 		driver.findElement(By.linkText("Proceed to demo.healthdox.com (unsafe)")).click();
 
@@ -161,12 +167,14 @@ public class BaseClass {
 		softassert.assertEquals(loginPg.getUserIdTextBox().isDisplayed(), true,
 				"UserId TextBox is not displayed in the home page");
 		extentTest.pass("UserId TextBox is provided in login page");
+	Reporter.log("UserId TextBox is provided in login page",true);
 		String actualUserIdPlaceHolder = loginPg.getUserIdTextBox().getAttribute("placeholder");
 		String expectedUserIdPlaceHolder = data.fromPropertyFile("userIdPlaceHolder");
 
 		softassert.assertEquals(expectedUserIdPlaceHolder, actualUserIdPlaceHolder,
 				"Place Holder is not provided in UserId TextBox");
 		extentTest.pass("Place Holder is provided for UserId TextBox in login page");
+		Reporter.log("Place Holder is provided for UserId TextBox in login page",true);
 		// Entering UserId into UserId TextBox.
 		loginPg.getUserIdTextBox().clear();
 		loginPg.getUserIdTextBox().sendKeys(data.fromPropertyFile("username"));
@@ -183,6 +191,7 @@ public class BaseClass {
 		softassert.assertEquals(expectedpasswordPlaceHolder, actualpasswordPlaceHolder,
 				"Place Holder is not provided in Password TextBox");
 		extentTest.pass("Place Holder is provided for UserId TextBox in login page");
+Reporter.log("Place Holder is provided for UserId TextBox in login page",true);
 
 		// Entering password into password TextBox
 		loginPg.getPasswordTextBox().clear();
@@ -196,6 +205,7 @@ public class BaseClass {
 		softassert.assertEquals(loginPg.getLoginButton().isDisplayed(), true,
 				"Login button is not displayed in the home page");
 		extentTest.pass("Clicked on Login button in login page");
+	Reporter.log("Clicked on Login button in login page",true);
 
 		// Clicking on the login button.
 		loginPg.getLoginButton().click();
@@ -203,6 +213,7 @@ public class BaseClass {
 		// Waiting till the elements are loading
 		explicit.until(ExpectedConditions.visibilityOf(homePg.getNavBarText()));
 		extentTest.info("Successfully navigated to home page of the application");
+		Reporter.log("Successfully navigated to home page of the application",true);
 
 		// Verifying Hipaa image module and performing click action
 		softassert.assertEquals(homePg.getHipaaText().isDisplayed(), true, "Hipaa image is not provided on home page");
@@ -214,6 +225,7 @@ public class BaseClass {
 		SwitchingDriverControl.switchDriverControl(driver, ParentWindowId, allWindowId);
 
 		extentTest.info("Successfully navigated to hipaa risk management system page");
+		Reporter.log("Successfully navigated to hipaa risk management system page",true);
 
 	}
 
@@ -244,12 +256,12 @@ public class BaseClass {
 	}
 
 	@AfterMethod
-	public void quit(Method m, ITestResult result) {
+	public void checkResult(Method m, ITestResult result) {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
 			String screenShotPath = null;
 			screenShotPath = captureScreenShot(
-					result.getTestContext().getName() + "_" + result.getMethod().getMethodName() + ".png");
+					result.getTestContext().getName() + "_" + result.getMethod().getMethodName() + ".jpg");
 			extentTest.addScreenCaptureFromPath(screenShotPath);
 			extentTest.fail(result.getThrowable());
 

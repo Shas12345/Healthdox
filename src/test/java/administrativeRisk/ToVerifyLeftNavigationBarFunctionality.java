@@ -13,11 +13,13 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		softassert.assertEquals(basePg.getKriDashboardLeftNavBar().isDisplayed(), true,
 				"KRI Dashboard section is not provided in left navigation bar for Administrative Risk Assessment");
 		Reporter.log("Verifyed KRI Dashboard section in left navigation bar for Administrative Risk Assessment", true);
+		extentTest.info("Verifyed KRI Dashboard section in left navigation bar for Administrative Risk Assessment");
 
 		softassert.assertEquals(basePg.getRiskAssessmentLeftNavBar().isDisplayed(), true,
 				"Risk Assessment is not provided in left navigation bar for Administrative Risk Assessment");
 		basePg.getRiskAssessmentLeftNavBar().click();
 		Reporter.log("Successfully clicked on Risk Assessment in left navigation bar", true);
+		extentTest.info("Successfully clicked on Risk Assessment in left navigation bar");
 		// Verifying and clicking on New Risk
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getNewRisk()));
 		softassert.assertEquals(basePg.getNewRisk().isDisplayed(), true,
@@ -27,6 +29,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking New risk in left navigation bar navigated to New Administrative Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking New risk in left navigation bar navigated to New Administrative Risk Assessment Page");
 		basePg.getRiskAssessmentLeftNavBar().click();
 		// Verifying and clicking on Edit Risk
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getEditRisk()));
@@ -37,6 +41,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking Edit risk in left navigation bar navigated to Edit Administrative Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking Edit risk in left navigation bar navigated to Edit Administrative Risk Assessment Page");
 		basePg.getRiskAssessmentLeftNavBar().click();
 		// Verifying and clicking on View Risk
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRisk()));
@@ -52,6 +58,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking All risk in left navigation bar navigated to All Administrative Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking All risk in left navigation bar navigated to All Administrative Risk Assessment Page");
 		// Verifying and clicking on open Risk under View Risk
 		basePg.getRiskAssessmentLeftNavBar().click();
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRiskArrow()));
@@ -64,6 +72,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking Open risk in left navigation bar navigated to All Administrative Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking Open risk in left navigation bar navigated to All Administrative Risk Assessment Page");
 		// Verifying and clicking on In progress Risk under View Risk
 		basePg.getRiskAssessmentLeftNavBar().click();
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRiskArrow()));
@@ -76,6 +86,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking In Progress risk in left navigation bar navigated to All Administrative Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking In Progress risk in left navigation bar navigated to All Administrative Risk Assessment Page");
 		// Verifying and clicking on Closed Risk under View Risk
 		basePg.getRiskAssessmentLeftNavBar().click();
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRiskArrow()));
@@ -88,6 +100,8 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Successfully verifyed on clicking Closed risk in left navigation bar navigated to All Administrative Risk Assessment Page",
 				true);
+		extentTest.info(
+				"Successfully verifyed on clicking Closed risk in left navigation bar navigated to All Administrative Risk Assessment Page");
 		// Verifying and clicking on Reports
 		softassert.assertEquals(basePg.getReports().isDisplayed(), true,
 				"Reports section is not provided in left navigation bar for Administrative Risk Assessment");
@@ -97,6 +111,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Risk Excel Reports option is not provided under Reports section in left navigation bar for Administrative Risk Assessment");
 		basePg.getRiskExcelReports().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.info("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on Risk PDF Reports option under Reports
 		basePg.getReports().click();
@@ -104,6 +119,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Risk PDF Reports option is not provided under Reports section in left navigation bar for Administrative Risk Assessment");
 		basePg.getRiskPdfReports().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.info("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on Self Risk Assessment Reports option under Reports
 		basePg.getReports().click();
@@ -111,6 +127,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"Risk PDF Reports option is not provided under Reports section in left navigation bar for Administrative Risk Assessment");
 		basePg.getRiskPdfReports().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.info("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on KRI PDF option under Reports
 		basePg.getReports().click();
@@ -118,6 +135,7 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 				"KRI PDF Reports option is not provided under Reports section in left navigation bar for Administrative Risk Assessment");
 		basePg.getKrisInPdf().click();
 		Reporter.log("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed", true);
+		extentTest.info("Error on clicking on Risk Excel reports in left navigation bar Server error is displayed");
 
 		// Verifying and clicking on System Configuration section in left navigation
 		// bar.
@@ -132,11 +150,14 @@ public class ToVerifyLeftNavigationBarFunctionality extends BaseClass {
 		Reporter.log(
 				"Sucessfully navigated to self risk Assessment Question page on clicking on Update Self Risk Assessment Question on left navigation bar",
 				true);
+		extentTest.info(
+				"Sucessfully navigated to self risk Assessment Question page on clicking on Update Self Risk Assessment Question on left navigation bar");
 		// Checking collapse functionality
 		softassert.assertEquals(basePg.getCollapseIcon().isDisplayed(), true,
 				"Collapse icon is not provided under System Configuration section in left navigation bar for Administrative Risk Assessment");
 		basePg.getCollapseIcon().click();
 		Reporter.log("Successfully clicked on collapse icon", true);
+		extentTest.info("Successfully clicked on collapse icon");
 	}
 
 }

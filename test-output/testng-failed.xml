@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="To Verify Data In Respective Status Page In Physical Risk(failed)">
     <classes>
-      <class name="technologyRisk.ToApproveTheRisk">
+      <class name="physicalRisk.ToVerifyDataInRespectiveStatusPage">
         <methods>
-          <include name="toApproveAndEditAndDeleteTechnologyRiskAssessment" invocation-numbers="0 1"/>
+          <include name="checkResult"/>
+          <include name="newPhysicalRiskAssessment"/>
           <include name="initialiseExtendReports"/>
           <include name="generateExtentReports"/>
           <include name="driver"/>
           <include name="quit"/>
+        </methods>
+      </class> <!-- physicalRisk.ToVerifyDataInRespectiveStatusPage -->
+    </classes>
+  </test> <!-- To Verify Data In Respective Status Page In Physical Risk(failed) -->
+  <test thread-count="5" name="To Test Search In Self RiskAssessment Question In Physical Risk(failed)">
+    <classes>
+      <class name="physicalRisk.ToTestSearchInSelfRiskAssessmentQuestion">
+        <methods>
+          <include name="checkResult"/>
+          <include name="initialiseExtendReports"/>
+          <include name="toTestSearchFunctionalityInSelfRiskAssessmentQuestion"/>
+          <include name="generateExtentReports"/>
+          <include name="driver"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- technologyRisk.ToApproveTheRisk -->
+      </class> <!-- physicalRisk.ToTestSearchInSelfRiskAssessmentQuestion -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- To Test Search In Self RiskAssessment Question In Physical Risk(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -3,7 +3,7 @@
 <suite name="Parallel Test Suite" thread-count="10" parallel="classes">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Hipaa.DropdownRisInput"/>
+      <class name="Hipaa.DropdownRiskInput"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

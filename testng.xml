@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="To Verify HRMS Page Components">
+  <test thread-count="5" name="Test">
     <classes>
-      <class name="technologyRisk.ToVerifyHRMPageComponents"/>
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="To Verify Left Navigation Bar Functionality">
-    <classes>
-      <class name="technologyRisk.ToVerifyLeftNavigationBarFunctionality"/>
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="To Verify Tool Tip In HRMS Page">
-    <classes>
-      <class name="technologyRisk.ToVerifyToolTipInHRMSPage"/>
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="ToVerifyHRMPageComponents">
-    <classes>
-      <class name="technologyRisk.ToVerifyComponentsInKriDashboardPage"/>
+      <class name="administrativeRisk.DropdownRiskInput"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

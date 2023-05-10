@@ -12,7 +12,7 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 	public String questionData = data.fromExcel("SelfAssessmentQuestrion", 1, 0);
 
 	@Test
-	public void addNewSelfRiskAssessmentQuestionInPhysicalRisk() {
+	public void addNewSelfRiskAssessmentQuestionInPhysicalRisk() throws InterruptedException {
 		hrmPg.getPhysicalRiskAssessmentText().click();
 		// Clicking on System Configuration
 		basePg.getSystemConfiguration().click();
@@ -46,6 +46,7 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 				basePg.getNextButton().click();
 			}
 		}
+		Thread.sleep(4000);
 		driver.findElement(
 				By.xpath("//td[text()='" + questionData + "']/..//i[@class='ace-icon fa fa-pencil bigger-120']"))
 				.click();
@@ -71,7 +72,7 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 		// message");
 	}
 
-	@Test(dependsOnMethods = "addNewSelfRiskAssessment")
+	@Test(dependsOnMethods = "addNewSelfRiskAssessmentQuestionInPhysicalRisk")
 	public void deleteSelfRiskAssessment() throws InterruptedException {
 		driver.findElement(By.xpath("(//button[@title='Close'])[2]")).click();
 		Thread.sleep(3000);

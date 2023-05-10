@@ -73,7 +73,7 @@ public class ReadData {
 		FileInputStream fis = null;
 		Workbook workbook = null;
 		try {
-			fis = new FileInputStream(new File("./TestData/Dropdown2.xlsx"));
+			fis = new FileInputStream(new File("./TestData/HIPAA.xlsx"));
 			workbook = WorkbookFactory.create(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

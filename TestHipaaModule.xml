@@ -241,7 +241,7 @@
 			<class name="technologyRisk.ToVerifyToolTipInHRMSPage" />
 		</classes>
 	</test> <!-- Test -->
-	<test thread-count="5" name="ToVerifyHRMPageComponents">
+	<test thread-count="5" name="To Verify HRM Page Components In Kri Dashboard Page">
 		<classes>
 			<class name="technologyRisk.ToVerifyComponentsInKriDashboardPage" />
 		</classes>
@@ -254,6 +254,16 @@
 	<test thread-count="5" name="Dropdown Risk Input Options In Physical Risk">
 		<classes>
 			<class name="physicalRisk.DropdownRiskInput" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="To Update Self Risk Assessment Question In Administrative Risk">
+		<classes>
+			<class name="administrativeRisk.ToUpdateSelfRiskAssessmentQuestion" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="To Update Self Risk Assessment Question In Physical Risk">
+		<classes>
+			<class name="physicalRisk.ToUpdateSelfRiskAssessmentQuestion" />
 		</classes>
 	</test> <!-- Test -->
 	<test thread-count="5" name="Dropdown Sub Control Name If Operational Radio Button And Maintenance Option Selected ">

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="To Update Self Risk Assessment Question In Administrative Risk">
+  <test thread-count="5" name="Dropdown Impact Level in Technology Risk">
     <classes>
-      <class name="administrativeRisk.ToUpdateSelfRiskAssessmentQuestion"/>
+      <class name="technologyRisk.DropdownImpactLevel"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

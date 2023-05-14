@@ -3,17 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="physicalRisk.ToUpdateSelfRiskAssessmentQuestion">
+      <class name="administrativeRisk.ToCreateANewAdministrativeRiskAssessmentNew">
         <methods>
-          <include name="addNewSelfRiskAssessmentQuestionInPhysicalRisk"/>
           <include name="checkResult"/>
-          <include name="deleteSelfRiskAssessment"/>
+          <include name="newTchnologyRiskAssessment" invocation-numbers="1"/>
           <include name="initialiseExtendReports"/>
           <include name="generateExtentReports"/>
           <include name="driver"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- physicalRisk.ToUpdateSelfRiskAssessmentQuestion -->
+      </class> <!-- administrativeRisk.ToCreateANewAdministrativeRiskAssessmentNew -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

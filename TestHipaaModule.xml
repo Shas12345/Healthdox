@@ -17,6 +17,16 @@
 			<class name="technologyRisk.DropdownRiskInput" />
 		</classes>
 	</test> <!-- Test -->
+	<test thread-count="5" name="To Verify Components In Kri Dashboard Page In Physical Risk">
+		<classes>
+			<class name="physicalRisk.ToVerifyComponentsInKriDashboardPage" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="To Verify Components In Kri Dashboard Page In Administrative Risk">
+		<classes>
+			<class name="administrativeRisk.ToVerifyComponentsInKriDashboardPage" />
+		</classes>
+	</test> <!-- Test -->
 	<test thread-count="5" name="Table Collpase Functionality In Technology Risk">
 		<classes>
 			<class name="technologyRisk.TableCollpaseFunctionality" />

@@ -26,173 +26,68 @@
       <![CDATA[Successfully navigated to hipaa risk management system page]]>
     </line>
     <line>
-      <![CDATA[Successfully clicked on Physical Risk Assessment text on Hipaa Risk Management Page]]>
+      <![CDATA[The Risk ID captured is JQW171]]>
     </line>
     <line>
-      <![CDATA[Successfully clicked on Risk Assessment on left navigation bar in Physical risks page]]>
+      <![CDATA[Successfully verified Success Message in Hardware Asset Page on creating a New Hardware Asset]]>
     </line>
     <line>
-      <![CDATA[The Management Certification, Accreditation, and Security Assessments  Sub Control Name Dropdown options from UI are ]]>
+      <![CDATA[JQW171]]>
     </line>
     <line>
-      <![CDATA[]]>
+      <![CDATA[Network]]>
     </line>
     <line>
-      <![CDATA[]]>
+      <![CDATA[Infrastructure]]>
     </line>
     <line>
-      <![CDATA[]]>
+      <![CDATA[Test]]>
     </line>
     <line>
-      <![CDATA[SYSTEM AND COMMUNICATIONS PROTECTION POLICY AND PROCEDURES]]>
+      <![CDATA[Test]]>
     </line>
     <line>
-      <![CDATA[APPLICATION PARTITIONING]]>
+      <![CDATA[Sony]]>
     </line>
     <line>
-      <![CDATA[SECURITY FUNCTION ISOLATION]]>
+      <![CDATA[Medium]]>
     </line>
     <line>
-      <![CDATA[INFORMATION IN SHARED RESOURCES]]>
+      <![CDATA[As]]>
     </line>
     <line>
-      <![CDATA[DENIAL OF SERVICE PROTECTION]]>
+      <![CDATA[per]]>
     </line>
     <line>
-      <![CDATA[RESOURCE AVAILABILITY]]>
+      <![CDATA[policy]]>
     </line>
     <line>
-      <![CDATA[BOUNDARY PROTECTION]]>
+      <![CDATA[Patient]]>
     </line>
     <line>
-      <![CDATA[TRANSMISSION CONFIDENTIALITY AND INTEGRITY]]>
+      <![CDATA[billing]]>
     </line>
     <line>
-      <![CDATA[TRANSMISSION CONFIDENTIALITY]]>
+      <![CDATA[Test]]>
     </line>
     <line>
-      <![CDATA[NETWORK DISCONNECT]]>
-    </line>
-    <line>
-      <![CDATA[TRUSTED PATH]]>
-    </line>
-    <line>
-      <![CDATA[CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT]]>
-    </line>
-    <line>
-      <![CDATA[CRYPTOGRAPHIC PROTECTION]]>
-    </line>
-    <line>
-      <![CDATA[PUBLIC ACCESS PROTECTIONS]]>
-    </line>
-    <line>
-      <![CDATA[COLLABORATIVE COMPUTING DEVICES]]>
-    </line>
-    <line>
-      <![CDATA[TRANSMISSION OF SECURITY ATTRIBUTES]]>
-    </line>
-    <line>
-      <![CDATA[PUBLIC KEY INFRASTRUCTURE CERTIFICATES]]>
-    </line>
-    <line>
-      <![CDATA[MOBILE CODE]]>
-    </line>
-    <line>
-      <![CDATA[VOICE OVER INTERNET PROTOCOL]]>
-    </line>
-    <line>
-      <![CDATA[SECURE NAME / ADDRESS RESOLUTION SERVICE]]>
-    </line>
-    <line>
-      <![CDATA[SECURE NAME / ADDRESS RESOLUTION SERVICE]]>
-    </line>
-    <line>
-      <![CDATA[ARCHITECTURE AND PROVISIONING FOR NAME / ADDRESS RESOLUTION SERVICE]]>
-    </line>
-    <line>
-      <![CDATA[SESSION AUTHENTICITY]]>
-    </line>
-    <line>
-      <![CDATA[FAIL IN KNOWN STATE]]>
-    </line>
-    <line>
-      <![CDATA[THIN NODES]]>
-    </line>
-    <line>
-      <![CDATA[HONEYPOTS]]>
-    </line>
-    <line>
-      <![CDATA[PLATFORM-INDEPENDENT APPLICATIONS]]>
-    </line>
-    <line>
-      <![CDATA[PROTECTION OF INFORMATION AT REST]]>
-    </line>
-    <line>
-      <![CDATA[HETEROGENEITY]]>
-    </line>
-    <line>
-      <![CDATA[CONCEALMENT AND MISDIRECTION]]>
-    </line>
-    <line>
-      <![CDATA[COVERT CHANNEL ANALYSIS]]>
-    </line>
-    <line>
-      <![CDATA[INFORMATION SYSTEM PARTITIONING]]>
-    </line>
-    <line>
-      <![CDATA[TRANSMISSION PREPARATION INTEGRITY]]>
-    </line>
-    <line>
-      <![CDATA[NON-MODIFIABLE EXECUTABLE PROGRAMS]]>
-    </line>
-    <line>
-      <![CDATA[HONEYCLIENTS]]>
-    </line>
-    <line>
-      <![CDATA[DISTRIBUTED PROCESSING AND STORAGE]]>
-    </line>
-    <line>
-      <![CDATA[OUT-OF-BAND CHANNELS]]>
-    </line>
-    <line>
-      <![CDATA[OPERATIONS SECURITY]]>
-    </line>
-    <line>
-      <![CDATA[PROCESS ISOLATION]]>
-    </line>
-    <line>
-      <![CDATA[WIRELESS LINK PROTECTION]]>
-    </line>
-    <line>
-      <![CDATA[PORT AND I/O DEVICE ACCESS]]>
-    </line>
-    <line>
-      <![CDATA[SENSOR CAPABILITY AND DATA]]>
-    </line>
-    <line>
-      <![CDATA[USAGE RESTRICTIONS]]>
-    </line>
-    <line>
-      <![CDATA[DETONATION CHAMBERS]]>
-    </line>
-    <line>
-      <![CDATA[Error : DropDown options from UI are not matching with expected option in the excel]]>
+      <![CDATA[Diagnostics]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="51233" started-at="2023-05-10T09:58:52 IST" finished-at="2023-05-10T09:59:43 IST">
+  <suite name="Default suite" duration-ms="90727" started-at="2023-05-14T10:42:34 IST" finished-at="2023-05-14T10:44:04 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="51233" started-at="2023-05-10T09:58:52 IST" finished-at="2023-05-10T09:59:43 IST">
-      <class name="physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected">
-        <test-method status="PASS" signature="initialiseExtendReports()[pri:0, instance:physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected@4d3167f4]" name="initialiseExtendReports" is-config="true" duration-ms="1079" started-at="2023-05-10T09:58:51 IST" finished-at="2023-05-10T09:58:52 IST">
+    <test name="Default test" duration-ms="90727" started-at="2023-05-14T10:42:34 IST" finished-at="2023-05-14T10:44:04 IST">
+      <class name="technologyRisk.ToCreateNewHardwareAsset">
+        <test-method status="PASS" signature="initialiseExtendReports()[pri:0, instance:technologyRisk.ToCreateNewHardwareAsset@612fc6eb]" name="initialiseExtendReports" is-config="true" duration-ms="1259" started-at="2023-05-14T10:42:32 IST" finished-at="2023-05-14T10:42:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseExtendReports -->
-        <test-method status="PASS" signature="driver(org.testng.ITestContext,java.lang.String)[pri:0, instance:physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected@4d3167f4]" name="driver" is-config="true" duration-ms="27146" started-at="2023-05-10T09:58:52 IST" finished-at="2023-05-10T09:59:19 IST">
+        <test-method status="PASS" signature="driver(org.testng.ITestContext,java.lang.String)[pri:0, instance:technologyRisk.ToCreateNewHardwareAsset@612fc6eb]" name="driver" is-config="true" duration-ms="34418" started-at="2023-05-14T10:42:34 IST" finished-at="2023-05-14T10:43:08 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5432c277]]>
+                <![CDATA[org.testng.TestRunner@6cf0a747]]>
               </value>
             </param>
             <param index="1">
@@ -228,188 +123,90 @@
             </line>
           </reporter-output>
         </test-method> <!-- driver -->
-        <test-method status="PASS" signature="dropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected()[pri:0, instance:physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected@4d3167f4]" name="dropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected" duration-ms="20740" started-at="2023-05-10T09:59:19 IST" finished-at="2023-05-10T09:59:40 IST">
-          <reporter-output>
-            <line>
-              <![CDATA[Successfully clicked on Physical Risk Assessment text on Hipaa Risk Management Page]]>
-            </line>
-            <line>
-              <![CDATA[Successfully clicked on Risk Assessment on left navigation bar in Physical risks page]]>
-            </line>
-            <line>
-              <![CDATA[The Management Certification, Accreditation, and Security Assessments  Sub Control Name Dropdown options from UI are ]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[SYSTEM AND COMMUNICATIONS PROTECTION POLICY AND PROCEDURES]]>
-            </line>
-            <line>
-              <![CDATA[APPLICATION PARTITIONING]]>
-            </line>
-            <line>
-              <![CDATA[SECURITY FUNCTION ISOLATION]]>
-            </line>
-            <line>
-              <![CDATA[INFORMATION IN SHARED RESOURCES]]>
-            </line>
-            <line>
-              <![CDATA[DENIAL OF SERVICE PROTECTION]]>
-            </line>
-            <line>
-              <![CDATA[RESOURCE AVAILABILITY]]>
-            </line>
-            <line>
-              <![CDATA[BOUNDARY PROTECTION]]>
-            </line>
-            <line>
-              <![CDATA[TRANSMISSION CONFIDENTIALITY AND INTEGRITY]]>
-            </line>
-            <line>
-              <![CDATA[TRANSMISSION CONFIDENTIALITY]]>
-            </line>
-            <line>
-              <![CDATA[NETWORK DISCONNECT]]>
-            </line>
-            <line>
-              <![CDATA[TRUSTED PATH]]>
-            </line>
-            <line>
-              <![CDATA[CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT]]>
-            </line>
-            <line>
-              <![CDATA[CRYPTOGRAPHIC PROTECTION]]>
-            </line>
-            <line>
-              <![CDATA[PUBLIC ACCESS PROTECTIONS]]>
-            </line>
-            <line>
-              <![CDATA[COLLABORATIVE COMPUTING DEVICES]]>
-            </line>
-            <line>
-              <![CDATA[TRANSMISSION OF SECURITY ATTRIBUTES]]>
-            </line>
-            <line>
-              <![CDATA[PUBLIC KEY INFRASTRUCTURE CERTIFICATES]]>
-            </line>
-            <line>
-              <![CDATA[MOBILE CODE]]>
-            </line>
-            <line>
-              <![CDATA[VOICE OVER INTERNET PROTOCOL]]>
-            </line>
-            <line>
-              <![CDATA[SECURE NAME / ADDRESS RESOLUTION SERVICE]]>
-            </line>
-            <line>
-              <![CDATA[SECURE NAME / ADDRESS RESOLUTION SERVICE]]>
-            </line>
-            <line>
-              <![CDATA[ARCHITECTURE AND PROVISIONING FOR NAME / ADDRESS RESOLUTION SERVICE]]>
-            </line>
-            <line>
-              <![CDATA[SESSION AUTHENTICITY]]>
-            </line>
-            <line>
-              <![CDATA[FAIL IN KNOWN STATE]]>
-            </line>
-            <line>
-              <![CDATA[THIN NODES]]>
-            </line>
-            <line>
-              <![CDATA[HONEYPOTS]]>
-            </line>
-            <line>
-              <![CDATA[PLATFORM-INDEPENDENT APPLICATIONS]]>
-            </line>
-            <line>
-              <![CDATA[PROTECTION OF INFORMATION AT REST]]>
-            </line>
-            <line>
-              <![CDATA[HETEROGENEITY]]>
-            </line>
-            <line>
-              <![CDATA[CONCEALMENT AND MISDIRECTION]]>
-            </line>
-            <line>
-              <![CDATA[COVERT CHANNEL ANALYSIS]]>
-            </line>
-            <line>
-              <![CDATA[INFORMATION SYSTEM PARTITIONING]]>
-            </line>
-            <line>
-              <![CDATA[TRANSMISSION PREPARATION INTEGRITY]]>
-            </line>
-            <line>
-              <![CDATA[NON-MODIFIABLE EXECUTABLE PROGRAMS]]>
-            </line>
-            <line>
-              <![CDATA[HONEYCLIENTS]]>
-            </line>
-            <line>
-              <![CDATA[DISTRIBUTED PROCESSING AND STORAGE]]>
-            </line>
-            <line>
-              <![CDATA[OUT-OF-BAND CHANNELS]]>
-            </line>
-            <line>
-              <![CDATA[OPERATIONS SECURITY]]>
-            </line>
-            <line>
-              <![CDATA[PROCESS ISOLATION]]>
-            </line>
-            <line>
-              <![CDATA[WIRELESS LINK PROTECTION]]>
-            </line>
-            <line>
-              <![CDATA[PORT AND I/O DEVICE ACCESS]]>
-            </line>
-            <line>
-              <![CDATA[SENSOR CAPABILITY AND DATA]]>
-            </line>
-            <line>
-              <![CDATA[USAGE RESTRICTIONS]]>
-            </line>
-            <line>
-              <![CDATA[DETONATION CHAMBERS]]>
-            </line>
-            <line>
-              <![CDATA[Error : DropDown options from UI are not matching with expected option in the excel]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- dropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected -->
-        <test-method status="PASS" signature="checkResult(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected@4d3167f4]" name="checkResult" is-config="true" duration-ms="1" started-at="2023-05-10T09:59:40 IST" finished-at="2023-05-10T09:59:40 IST">
+        <test-method status="PASS" signature="createNewHardwareAsset([Ljava.lang.String;)[pri:0, instance:technologyRisk.ToCreateNewHardwareAsset@612fc6eb]" name="createNewHardwareAsset" duration-ms="46006" started-at="2023-05-14T10:43:16 IST" data-provider="getData" finished-at="2023-05-14T10:44:02 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected.dropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected()]]>
+                <![CDATA[[Ljava.lang.String;@260ff5b7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The Risk ID captured is JQW171]]>
+            </line>
+            <line>
+              <![CDATA[Successfully verified Success Message in Hardware Asset Page on creating a New Hardware Asset]]>
+            </line>
+            <line>
+              <![CDATA[JQW171]]>
+            </line>
+            <line>
+              <![CDATA[Network]]>
+            </line>
+            <line>
+              <![CDATA[Infrastructure]]>
+            </line>
+            <line>
+              <![CDATA[Test]]>
+            </line>
+            <line>
+              <![CDATA[Test]]>
+            </line>
+            <line>
+              <![CDATA[Sony]]>
+            </line>
+            <line>
+              <![CDATA[Medium]]>
+            </line>
+            <line>
+              <![CDATA[As]]>
+            </line>
+            <line>
+              <![CDATA[per]]>
+            </line>
+            <line>
+              <![CDATA[policy]]>
+            </line>
+            <line>
+              <![CDATA[Patient]]>
+            </line>
+            <line>
+              <![CDATA[billing]]>
+            </line>
+            <line>
+              <![CDATA[Test]]>
+            </line>
+            <line>
+              <![CDATA[Diagnostics]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createNewHardwareAsset -->
+        <test-method status="PASS" signature="checkResult(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:technologyRisk.ToCreateNewHardwareAsset@612fc6eb]" name="checkResult" is-config="true" duration-ms="2" started-at="2023-05-14T10:44:02 IST" finished-at="2023-05-14T10:44:02 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void technologyRisk.ToCreateNewHardwareAsset.createNewHardwareAsset(java.lang.String[])]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=dropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected status=SUCCESS method=DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected.dropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected()[pri:0, instance:physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected@4d3167f4] output=Successfully clicked on Physical Risk Assessment text on Hipaa Risk Management Page]]]>
+                <![CDATA[[TestResult name=createNewHardwareAsset status=SUCCESS method=ToCreateNewHardwareAsset.createNewHardwareAsset([Ljava.lang.String;)[pri:0, instance:technologyRisk.ToCreateNewHardwareAsset@612fc6eb] output=The Risk ID captured is JQW171]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResult -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected@4d3167f4]" name="quit" is-config="true" duration-ms="3181" started-at="2023-05-10T09:59:40 IST" finished-at="2023-05-10T09:59:43 IST">
+        <test-method status="PASS" signature="quit()[pri:0, instance:technologyRisk.ToCreateNewHardwareAsset@612fc6eb]" name="quit" is-config="true" duration-ms="1942" started-at="2023-05-14T10:44:02 IST" finished-at="2023-05-14T10:44:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="generateExtentReports()[pri:0, instance:physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected@4d3167f4]" name="generateExtentReports" is-config="true" duration-ms="2999" started-at="2023-05-10T09:59:43 IST" finished-at="2023-05-10T09:59:46 IST">
+        <test-method status="PASS" signature="generateExtentReports()[pri:0, instance:technologyRisk.ToCreateNewHardwareAsset@612fc6eb]" name="generateExtentReports" is-config="true" duration-ms="3511" started-at="2023-05-14T10:44:04 IST" finished-at="2023-05-14T10:44:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateExtentReports -->
-      </class> <!-- physicalRisk.DropdownSubControlNameIfManagementRadioButtonAndCertificationAccreditationAndSecurityAssessmentsOptionSelected -->
+      </class> <!-- technologyRisk.ToCreateNewHardwareAsset -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

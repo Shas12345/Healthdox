@@ -23,6 +23,7 @@ import Generic_Liberary.BaseClass;
 public class ToApproveTheRisk extends BaseClass {
 	ArrayList<String> expected = new ArrayList<String>();
 	ArrayList<String> actual = new ArrayList<String>();
+	public String riskId;
 
 	@DataProvider
 	public String[][] getData() {
@@ -42,7 +43,7 @@ public class ToApproveTheRisk extends BaseClass {
 		explicit.until(ExpectedConditions.visibilityOf(basePg.getNewRisk()));
 		basePg.getNewRisk().click();
 		// Capturing the Risk Id from the TextBox
-		String riskId = basePg.getRiskIdTextBox().getAttribute("value");
+		riskId = basePg.getRiskIdTextBox().getAttribute("value");
 		Reporter.log("The Risk ID captured is " + riskId, true);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, basePg.getRiskAssetDropdown(), info[0]);

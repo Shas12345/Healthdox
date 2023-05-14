@@ -16,9 +16,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentTest;
-
 import Generic_Liberary.BaseClass;
 
 public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
@@ -32,11 +29,10 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData")
-	public void createNewAdministrativeRiskAssessment(String info[]) throws InterruptedException {
+	public void newTchnologyRiskAssessment(String info[]) throws InterruptedException {
 		for (int i = 0; i < info.length; i++) {
 			expected.add(info[i]);
 		}
-		Iterator<String> it = expected.iterator();
 		explicit.until(ExpectedConditions.elementToBeClickable(hrmPg.getAdministrativeRiskAssessmentText()));
 		hrmPg.getAdministrativeRiskAssessmentText().click();
 		basePg.getRiskAssessmentArrow().click();
@@ -46,6 +42,7 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		String riskId = basePg.getRiskIdTextBox().getAttribute("value");
 		Reporter.log("The Risk ID captured is " + riskId, true);
 		extentTest.info("The Risk ID captured is " + riskId);
+		expected.add(0, riskId);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, adminPg.getRiskAgentDropdown(), info[0]);
 		// Entering the Data into DepartmentName
@@ -79,6 +76,7 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		} catch (Exception e) {
 			driver.switchTo().activeElement().sendKeys(info[10], Keys.ENTER);
 		}
+	//	data.handleDropdownByText(explicit, driver, basePg.getRiskImpactDropdown(), info[10]);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, basePg.getProbabilityOfOccuranceDropdown(), info[11]);
 		// Reading the data from excel and selecting the drop down option
@@ -86,19 +84,18 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		// Clicking on Radio Button
 		explicit.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='lbl'])[" + info[13] + "]")));
 		driver.findElement(By.xpath("(//span[@class='lbl'])[" + info[13] + "]")).click();
-		// driver.findElement(By.xpath("(//div[@class='radio'])["+it.next()+"]")).click();
 		// Reading the data from excel and selecting the drop down option
 		js.executeScript("arguments[0].scrollIntoView(false)", basePg.getResponsibleDeptLabel());
 		data.handleDropdownByText(explicit, driver, basePg.getControlNameDropdown(), info[14]);
-		Thread.sleep(2000);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, basePg.getSubControlNameDropdown(), info[15]);
 		// Capturing description from Text Box
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getDescriptionTextBox()));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		String description = basePg.getDescriptionTextBox().getAttribute("value");
 		Reporter.log("The captured description :" + description, true);
-		extentTest.info("The captured description :" + description);
+		// extentTest.info("The captured description :" + description);
+		expected.add(17, description);
 		// Entering the Data into New Controls TextBox
 		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getActionProposedTextBox()));
 		basePg.getActionProposedTextBox().sendKeys(info[16]);
@@ -109,14 +106,12 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		basePg.getTargetDateTextBox().sendKeys(info[18], Keys.ENTER);
 		// Capturing description from Text Box
 		explicit.until(ExpectedConditions.visibilityOf(basePg.getActionProposedTextBox()));
-	
-		// Reading the data from excel and selecting the drop down option
+		// Reading the data from excel and selecting the dropdown option
 		js.executeScript("arguments[0].scrollIntoView(false)", adminPg.getSaveButton());
 		data.handleDropdownByText(explicit, driver, basePg.getResponsibleDebtDropdown(), info[19]);
-		//capturing quarter data
+		// capturing the Target Quarter
 		String quarter = basePg.getTargetQurterTextBox().getAttribute("value");
 		Reporter.log("The Target Quarter is :" + quarter, true);
-		extentTest.info("The Target Quarter is :" + quarter);
 		// Reading the data from excel and selecting the drop down option
 		data.handleDropdownByText(explicit, driver, basePg.getRiskResponseDropdown(), info[20]);
 		// Reading the data from excel and selecting the drop down option
@@ -126,7 +121,11 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		basePg.getClosedDateTextBox().sendKeys(info[22]);
 		// Clicking on Save Button
 		explicit.until(ExpectedConditions.elementToBeClickable(adminPg.getSaveButton()));
+		expected.remove(14);
+		expected.remove(expected.size() - 1);
+		System.out.println(expected.size());
 		adminPg.getSaveButton().click();
+
 		explicit.until(ExpectedConditions.visibilityOf(basePg.getSuccessfullPopupHeader()));
 		for (;;) {
 			try {
@@ -136,128 +135,119 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 				basePg.getNextButton().click();
 			}
 		}
-		String[] value = driver.findElement(By.xpath("//span[contains(text(),'" + riskId + "')]/../..")).getText()
-				.split(" ");
-		for (int i = 0; i < value.length; i++) {
-			System.out.println(value[i]);
-		}
 		driver.findElement(By
 				.xpath("//span[contains(text(),'" + riskId + "')]/../..//i[contains(@class,'ace-icon fa fa-pencil')]"))
 				.click();
-		Reporter.log("The Data in Edit Technology Risk Assessment Page is :", true);
+		Reporter.log("The Data in Edit Administrative Risk Assessment Page is :", true);
 		explicit.until(ExpectedConditions.textToBePresentInElementValue(basePg.getRiskIdTextBox(), riskId));
-		explicit.until(ExpectedConditions.elementToBeClickable(basePg.getRiskIdTextBox()));
 		// Conforming the data entered in edit
 		String riskIdOnEditPage = basePg.getRiskIdTextBox().getAttribute("value");
+		actual.add(riskIdOnEditPage);
 		Reporter.log(riskIdOnEditPage, true);
-		String riskAgentDropdownOnEditPage = adminPg.getRiskAgentDropdown().getAttribute("value");
+		String riskAgentDropdownOnEditPage = adminPg.getRiskAgentDropdown().getText();
 		Reporter.log(riskAgentDropdownOnEditPage, true);
+		actual.add(riskAgentDropdownOnEditPage);
 		String departmentNameTextBoxOnEditPage = basePg.getDepartmentNameTextBox().getAttribute("value");
 		Reporter.log(departmentNameTextBoxOnEditPage, true);
+		actual.add(departmentNameTextBoxOnEditPage);
 		String assetNameTextBoxOnEditPage = basePg.getAssetNameTextBox().getAttribute("value");
 		Reporter.log(assetNameTextBoxOnEditPage, true);
+		actual.add(assetNameTextBoxOnEditPage);
 		String assessorTextBoxOnEditPage = basePg.getAssessorTextBox().getAttribute("value");
 		Reporter.log(assessorTextBoxOnEditPage, true);
+		actual.add(assessorTextBoxOnEditPage);
+		String assessedTextBoxOnEditPage = basePg.getAssessedTextBox().getAttribute("value");
+		Reporter.log(assessedTextBoxOnEditPage, true);
+		actual.add(assessedTextBoxOnEditPage);
 		String riskInputDropdownOnEditPage = basePg.getRiskInputDropdown().getText();
+		actual.add(riskInputDropdownOnEditPage);
 		Reporter.log(riskInputDropdownOnEditPage, true);
 		String threadSourceDropdownOnEditPage = basePg.getThreadSourceDropdown().getText();
+		actual.add(threadSourceDropdownOnEditPage);
 		Reporter.log(threadSourceDropdownOnEditPage, true);
 		String riskDescriptionTextBoxOnEditPage = basePg.getRiskDescriptionTextBox().getAttribute("value");
+		actual.add(riskDescriptionTextBoxOnEditPage);
 		Reporter.log(riskDescriptionTextBoxOnEditPage, true);
 		String threatDescriptionTextBoxOnEditPage = basePg.getThreatDescriptionTextBox().getAttribute("value");
+		actual.add(threatDescriptionTextBoxOnEditPage);
 		Reporter.log(threatDescriptionTextBoxOnEditPage, true);
 		String existingControlTextBoxOnEditPage = basePg.getExistingControlTextBox().getAttribute("value");
+		actual.add(existingControlTextBoxOnEditPage);
 		Reporter.log(existingControlTextBoxOnEditPage, true);
 		String riskImpactDropdownOnEditPage = basePg.getRiskImpactDropdown().getText();
+		actual.add(riskImpactDropdownOnEditPage);
 		Reporter.log(riskImpactDropdownOnEditPage, true);
+		String probabilityOfOccuranceDropdownOnEditPage = basePg.getProbabilityOfOccuranceDropdown().getText();
+		Reporter.log(probabilityOfOccuranceDropdownOnEditPage, true);
+		actual.add(probabilityOfOccuranceDropdownOnEditPage);
 		String impactLevelDropdownOnEditPage = basePg.getImpactLevelDropdown().getText();
+		actual.add(impactLevelDropdownOnEditPage);
 		Reporter.log(impactLevelDropdownOnEditPage, true);
 		js.executeScript("arguments[0].scrollIntoView(false)", basePg.getResponsibleDeptLabel());
 		String controlNameDropdownOnEditPage = basePg.getControlNameDropdown().getText();
+		actual.add(controlNameDropdownOnEditPage);
 		Reporter.log(controlNameDropdownOnEditPage, true);
 		String subControlNameDropdownOnEditPage = basePg.getSubControlNameDropdown().getText();
+		actual.add(subControlNameDropdownOnEditPage);
 		Reporter.log(subControlNameDropdownOnEditPage, true);
 		String descriptionTextBoxOnEditPage = basePg.getDescriptionTextBox().getAttribute("value");
+		actual.add(descriptionTextBoxOnEditPage);
 		Reporter.log(descriptionTextBoxOnEditPage, true);
+		String actionProposedTextBoxOnEditPage = basePg.getActionProposedTextBox().getAttribute("value");
+		Reporter.log(actionProposedTextBoxOnEditPage, true);
+		actual.add(actionProposedTextBoxOnEditPage);
+		String responsibleTextBoxOnEditPage = basePg.getResponsibleTextBox().getAttribute("value");
+		Reporter.log(responsibleTextBoxOnEditPage, true);
+		actual.add(responsibleTextBoxOnEditPage);
+		String targetDateTextBoxOnEditPage = basePg.getTargetDateTextBox().getAttribute("value");
+		Reporter.log(targetDateTextBoxOnEditPage,true);
+		actual.add(targetDateTextBoxOnEditPage);
 		String targetQurterTextBoxOnEditPage = basePg.getTargetQurterTextBox().getAttribute("value");
 		Reporter.log(targetQurterTextBoxOnEditPage, true);
+	//	actual.add(targetQurterTextBoxOnEditPage);
 		js.executeScript("arguments[0].scrollIntoView(false)", adminPg.getSaveButton());
 		String responsibleDebtDropdownOnEditPage = basePg.getResponsibleDebtDropdown().getText();
+		actual.add(responsibleDebtDropdownOnEditPage);
 		Reporter.log(responsibleDebtDropdownOnEditPage, true);
 		String riskResponseDropdownOnEditPage = basePg.getRiskResponseDropdown().getText();
+		actual.add(riskResponseDropdownOnEditPage);
 		Reporter.log(riskResponseDropdownOnEditPage, true);
-		data.handleDropdownByText(explicit, driver, basePg.getStatusDropdown(), info[23]);
+		// data.handleDropdownByText(explicit, driver, basePg.getStatusDropdown(),
+		// info[23]);
 		String statusDropdownOnEditPage = basePg.getStatusDropdown().getText();
 		Reporter.log(statusDropdownOnEditPage, true);
-		String closedDateTextBoxOnEditPage = basePg.getClosedDateTextBox().getAttribute("value");
+		actual.add(statusDropdownOnEditPage);
+		String closedDateTextBoxOnEditPage = basePg.getClosedDateTextBox().getText();
+		actual.add(closedDateTextBoxOnEditPage);
 		Reporter.log(closedDateTextBoxOnEditPage, true);
-		adminPg.getSaveButton().click();
 
-		// Verifying the entered data present in all risk and clicking on view icon
-		/*
-		 * js.executeScript("arguments[0].scrollIntoView(true)",
-		 * adminPg.getListHeader());
-		 * explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRisk()))
-		 * ; basePg.getViewRisk().click();
-		 * explicit.until(ExpectedConditions.elementToBeClickable(basePg.getAllRisk()));
-		 * basePg.getAllRisk().click(); for (;;) { try {
-		 * driver.findElement(By.xpath("//span[contains(text(),'" + riskId +
-		 * "')]/../..")); break; } catch (Exception e) { basePg.getNextButton().click();
-		 * } } driver.findElement( By.xpath("//span[contains(text(),'" + riskId +
-		 * "')]/../..//i[contains(@class,'ace-icon fa fa-eye')]")) .click(); // Clicking
-		 * on Ok button driver.findElement(By.id("closeBtn")).click();
-		 * Reporter.log("The new Administrative risk is present in All Risk page",
-		 * true);
-		 * 
-		 * // Verifying the entered data present in Open risk and clicking on view icon
-		 * explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRisk()))
-		 * ; basePg.getViewRisk().click();
-		 * explicit.until(ExpectedConditions.elementToBeClickable(basePg.getOpenRisk()))
-		 * ; basePg.getOpenRisk().click(); for (;;) { try {
-		 * driver.findElement(By.xpath("//span[contains(text(),'" + riskId +
-		 * "')]/../..")); driver.findElement(By.xpath( "//span[contains(text(),'" +
-		 * riskId + "')]/../..//i[contains(@class,'ace-icon fa fa-eye')]")) .click();
-		 * driver.findElement(By.id("closeBtn")).click(); break; } catch (Exception e) {
-		 * try { basePg.getNextButton().click(); } catch (Exception e1) {
-		 * Reporter.log("Administrative risk is not found in Open page", true);
-		 * 
-		 * } } } // Verifying the entered data present in InProgress risk and clicking
-		 * on view // icon
-		 * explicit.until(ExpectedConditions.elementToBeClickable(basePg.getViewRisk()))
-		 * ; basePg.getViewRisk().click();
-		 * explicit.until(ExpectedConditions.elementToBeClickable(basePg.
-		 * getInProgressRisk())); basePg.getInProgressRisk().click(); for (;;) { try {
-		 * driver.findElement(By.xpath("//span[contains(text(),'" + riskId +
-		 * "')]/../..")); break; } catch (Exception e) { basePg.getNextButton().click();
-		 * } } driver.findElement( By.xpath("//span[contains(text(),'" + riskId +
-		 * "')]/../..//i[contains(@class,'ace-icon fa fa-eye')]")) .click(); // Clicking
-		 * on Ok button driver.findElement(By.id("closeBtn")).click();
-		 * Reporter.log("The new Administrative risk is present in All Risk page",
-		 * true);
-		 */
-		// Assert.assertEquals(basePg.getTextOnSuccessfullPopup(),
-		// technoPg.getTechnologyPageTitle(),
-		// "User is not able to save the Edit and save the Technology Risk Assessment");
+		System.out.println(actual.size());
+		System.out.println("The actual data");
+		for (String actualData : actual) {
+			System.out.println(actualData);
+
+		}
+
+		for (int i = 0; i < expected.size() - 1; i++) {
+			if (expected.get(i).equalsIgnoreCase(actual.get(i))) {
+				continue;
+			} else {
+				Reporter.log("The data is not matching Expected " + expected.get(i) + " but found " + actual.get(i),
+						true);
+				extentTest.fail("The data is not matching Expected " + expected.get(i) + " but found " + actual.get(i));
+
+			}
+		}
+		expected.removeAll(expected);
+		actual.removeAll(actual);
+
+		adminPg.getSaveButton().click();
+		// softassert.assertEquals(basePg.getTextOnSuccessfullPopup(),
+		// technoPg.getAdministrativePageTitle(), //
+		// "User is not able to save the Edit and save the Administrative Risk Assessment");
 		for (int i = 0; i <= 4; i++) {
 			driver.navigate().back();
 		}
-		/*
-		 * for (int i = 0; i < value.length; i++) { if (i == 0 &&
-		 * value[i].equals(riskId)) Reporter.
-		 * log("The Creasted New Technology exists in Edit Risk Page with Risk Id " +
-		 * riskId, true); else if (i == 1 && value[i].equals(info[0])) Reporter.
-		 * log("The Created New Technology exists in Edit Risk Page with Risk Asset Class "
-		 * + info[0], true); else if (i == 2 && value[i].equals(info[2])) Reporter.
-		 * log("The Created New Technology exists in Edit Risk Page with Asset Name " +
-		 * info[2], true); else if (i == 3 && value[i].equals(info[4])) Reporter.
-		 * log("The Created New Technology exists in Edit Risk Page with Assessed date "
-		 * + info[4], true); else if (i == 4 && value[i].equals(info[7])) Reporter.
-		 * log("The Created New Technology exists in Edit Risk Page with Risk description "
-		 * + info[7], true); else
-		 * Reporter.log("The Created New Technology not exists in the Edit Risk Page",
-		 * true); }
-		 */
-		// Reporter.log(value, true);
 
 	}
 
@@ -269,7 +259,6 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		try {
 			fis = new FileInputStream("./TestData/HIPAA.xlsx");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
@@ -282,15 +271,14 @@ public class ToCreateANewAdministrativeRiskAssessment extends BaseClass {
 		Sheet sheet = workBook.getSheet("NewAdministrativeData");
 		DataFormatter formatter = new DataFormatter();
 
-		// Get physical number of rows
+		// Get Administrative number of rows
 		int rows = sheet.getPhysicalNumberOfRows();
-		// Get Physical number of cells
+		// Get Administrative number of cells
 		int cells = sheet.getRow(0).getPhysicalNumberOfCells();
 		data = new String[rows - 1][cells];
 		for (int i = 1; i < rows; i++) {
 			for (int j = 0; j < cells; j++) {
 				String cellData = formatter.formatCellValue(sheet.getRow(i).getCell(j));
-				;
 				data[i - 1][j] = cellData;
 			}
 

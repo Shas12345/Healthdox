@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="To Update Self Risk Assessment Question In Administrative Risk">
+  <test thread-count="5" name="To Verify Components In Kri Dashboard Page In Physical Risk">
     <classes>
-      <class name="administrativeRisk.ToUpdateSelfRiskAssessmentQuestion"/>
+      <class name="physicalRisk.ToVerifyComponentsInKriDashboardPage"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="To Verify Components In Kri Dashboard Page In Administrative Risk">
+    <classes>
+      <class name="administrativeRisk.ToVerifyComponentsInKriDashboardPage"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -151,8 +151,6 @@ public class BaseClass {
 		driver.get(url);
 		extentTest.info("Successfully navigated to the url");
 		Reporter.log("Successfully navigated to the url",true);
-		driver.findElement(By.id("details-button")).click();
-		driver.findElement(By.linkText("Proceed to demo.healthdox.com (unsafe)")).click();
 
 		// using action class reference variable to do mouse over actions on the
 		// application

@@ -88,11 +88,12 @@ public class BaseClass {
 	public void driver(ITestContext context, @Optional("chrome") String bname) {
 		extentTest = extentReports.createTest(context.getName());
 		ChromeOptions co = new ChromeOptions();
-		co.addArguments("--headless");
+		co.addArguments("--ignore-certificate-errors");
+		co.addArguments("--ignore-ssl-errors");
 		// Getting browser value from xml and comparing them.
 		if (bname.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(co);
 			extentTest.info("Chrome Browser launched successfully");
 			Reporter.log("Chrome Browser launched successfully",true);
 

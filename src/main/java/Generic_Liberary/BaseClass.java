@@ -88,11 +88,12 @@ public class BaseClass {
 	public void driver(ITestContext context, @Optional("chrome") String bname) {
 		extentTest = extentReports.createTest(context.getName());
 		ChromeOptions co = new ChromeOptions();
-		co.addArguments("--headless");
+		co.addArguments("--ignore-certificate-errors");
+		co.addArguments("--ignore-ssl-errors");
 		// Getting browser value from xml and comparing them.
 		if (bname.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(co);
 			extentTest.info("Chrome Browser launched successfully");
 			Reporter.log("Chrome Browser launched successfully",true);
 
@@ -140,8 +141,6 @@ public class BaseClass {
 
 		softassert = new SoftAssert();
 
-		//
-
 		extentTest.assignAuthor(author);
 		extentTest.assignDevice(device);
 
@@ -150,8 +149,6 @@ public class BaseClass {
 		driver.get(url);
 		extentTest.info("Successfully navigated to the url");
 		Reporter.log("Successfully navigated to the url",true);
-		driver.findElement(By.id("details-button")).click();
-		driver.findElement(By.linkText("Proceed to demo.healthdox.com (unsafe)")).click();
 
 		// using action class reference variable to do mouse over actions on the
 		// application

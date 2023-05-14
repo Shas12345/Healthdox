@@ -71,7 +71,7 @@ public class ToUpdateSelfRiskAssessmentQuestion extends BaseClass {
 		// message");
 	}
 
-	@Test(dependsOnMethods = "addNewSelfRiskAssessment")
+	@Test(dependsOnMethods = "addNewSelfRiskAssessmentQuestionInAdministrativeRisk")
 	public void deleteSelfRiskAssessment() throws InterruptedException {
 		driver.findElement(By.xpath("(//button[@title='Close'])[2]")).click();
 		Thread.sleep(3000);
